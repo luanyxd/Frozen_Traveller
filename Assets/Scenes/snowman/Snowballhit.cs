@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class Snowballhit : MonoBehaviour
 {
+    //public Gameobject snowPrefab;
+
     // Start is called before the first frame update
     void Start()
     {
