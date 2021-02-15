@@ -29,6 +29,9 @@ public class playercontroller : MonoBehaviour
         Flip();
         Jump();
         CheckGrounded();
+        SwitchAnimation();
+        Attack();
+
     }
     void CheckGrounded()
     {
@@ -80,6 +83,21 @@ public class playercontroller : MonoBehaviour
                     canDoubleJump = false;
                 }
             }
+        }
+    }
+    void SwitchAnimation()
+    {
+        anim.SetBool("idle", false);
+        if (isGround)
+        {
+            anim.SetBool("idle", true);
+        }
+    }
+    void Attack()
+    {
+        if (Input.GetButtonDown("Attack"))
+        {
+            anim.SetTrigger("Attack");
         }
     }
 }
