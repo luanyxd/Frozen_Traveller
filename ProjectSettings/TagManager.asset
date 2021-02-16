@@ -14,11 +14,12 @@ TagManager:
   - 
   - 
   - Ground
-  - 
+  - Player
   - Foreground
-  - 
-  - 
-  - 
+  - Item
+  - TriggerBox
+  - Background
+  - Spike
   - 
   - 
   - 
@@ -38,6 +39,9 @@ TagManager:
   - 
   - 
   m_SortingLayers:
+  - name: Sky
+    uniqueID: 522607291
+    locked: 0
   - name: Background
     uniqueID: 3555341239
     locked: 0
@@ -46,4 +50,7 @@ TagManager:
     locked: 0
   - name: Foreground
     uniqueID: 3055573089
+    locked: 0
+  - name: Item
+    uniqueID: 3780652011
     locked: 0
