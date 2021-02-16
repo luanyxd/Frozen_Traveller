@@ -14,6 +14,32 @@ public class playercontroller : MonoBehaviour
     private bool isGround;
     private bool canDoubleJump;
 
+    private PlayerInputaction controls;
+    private Vector2 move;
+    void Awake()
+    {
+        controls = new PlayerInputaction();
+        
+        controls.GamePlay.Move.performed += ctx => move = ctx.ReadValue<Vector2>();
+        controls.GamePlay.Move.canceled += ctx => move = Vector2.zero;
+        controls.GamePlay.Attack.started += ctx => Attack();
+        controls.GamePlay.Jump.started += ctx => Jump();
+        
+        
+
+    }
+    void OnEnable()
+    {
+        controls.GamePlay.Enable();
+    }
+
+    void OnDisable()
+    {
+        controls.GamePlay.Disable();
+    }
+
+
+
     // Start is called before the first frame update
     void Start()
     {
@@ -27,21 +53,22 @@ public class playercontroller : MonoBehaviour
     {
         Run();
         Flip();
-        Jump();
+        //Jump();
         CheckGrounded();
         SwitchAnimation();
-        Attack();
+        //Attack();
 
     }
     void CheckGrounded()
     {
         isGround = myFeet.IsTouchingLayers(LayerMask.GetMask("Ground"));
-        Debug.Log(isGround);
+        //Debug.Log(isGround);
     }
     void Run()
     {
-        float moveDir = Input.GetAxis("Horizontal");
-        Vector2 playerVel = new Vector2(moveDir * speed, rb2d.velocity.y);
+       // float moveDir = Input.GetAxis("Horizontal");
+        //Vector2 playerVel = new Vector2(moveDir * speed, rb2d.velocity.y);
+       Vector2 playerVel = new Vector2(move.x * speed, rb2d.velocity.y);
         rb2d.velocity = playerVel;
         bool playerHasXSpeed = Mathf.Abs(rb2d.velocity.x) > Mathf.Epsilon;
         anim.SetBool("Run", playerHasXSpeed);
@@ -66,7 +93,8 @@ public class playercontroller : MonoBehaviour
     
     void Jump()
     {
-        if (Input.GetButtonDown("Jump"))
+      
+        //if (Input.GetButtonDown("Jump"))
         {
             if (isGround)
             {
@@ -95,7 +123,7 @@ public class playercontroller : MonoBehaviour
     }
     void Attack()
     {
-        if (Input.GetButtonDown("Attack"))
+       // if (Input.GetButtonDown("Attack"))
         {
             anim.SetTrigger("Attack");
         }
