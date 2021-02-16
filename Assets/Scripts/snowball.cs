@@ -15,7 +15,7 @@ public class snowball : MonoBehaviour
     void Start()
     {
         rb2d = GetComponent<Rigidbody2D>();
-        rb2d.velocity = transform.right * speed;
+        rb2d.velocity = -transform.right * speed;
         startPos = transform.position;
 
 

@@ -55,7 +55,7 @@ public class playercontroller : MonoBehaviour
         Flip();
         //Jump();
         CheckGrounded();
-        SwitchAnimation();
+       // SwitchAnimation();
         //Attack();
 
     }
@@ -127,5 +127,6 @@ public class playercontroller : MonoBehaviour
         {
             anim.SetTrigger("Attack");
         }
+       // anim.SetBool("idle", true);
     }
 }

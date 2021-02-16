@@ -41,6 +41,14 @@ public class @PlayerInputaction : IInputActionCollection, IDisposable
                     ""expectedControlType"": ""Button"",
                     ""processors"": """",
                     ""interactions"": """"
+                },
+                {
+                    ""name"": ""Snowballhit"",
+                    ""type"": ""Button"",
+                    ""id"": ""d2bb1c62-a1cc-4416-be43-25b4cf2790ef"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """"
                 }
             ],
             ""bindings"": [
@@ -175,6 +183,17 @@ public class @PlayerInputaction : IInputActionCollection, IDisposable
                     ""action"": ""Jump"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""b29fa295-4221-449b-a4fc-de658d39a207"",
+                    ""path"": ""<Keyboard>/j"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Snowballhit"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
                 }
             ]
         }
@@ -192,6 +211,7 @@ public class @PlayerInputaction : IInputActionCollection, IDisposable
         m_GamePlay_Move = m_GamePlay.FindAction("Move", throwIfNotFound: true);
         m_GamePlay_Attack = m_GamePlay.FindAction("Attack", throwIfNotFound: true);
         m_GamePlay_Jump = m_GamePlay.FindAction("Jump", throwIfNotFound: true);
+        m_GamePlay_Snowballhit = m_GamePlay.FindAction("Snowballhit", throwIfNotFound: true);
     }
 
     public void Dispose()
@@ -244,6 +264,7 @@ public class @PlayerInputaction : IInputActionCollection, IDisposable
     private readonly InputAction m_GamePlay_Move;
     private readonly InputAction m_GamePlay_Attack;
     private readonly InputAction m_GamePlay_Jump;
+    private readonly InputAction m_GamePlay_Snowballhit;
     public struct GamePlayActions
     {
         private @PlayerInputaction m_Wrapper;
@@ -251,6 +272,7 @@ public class @PlayerInputaction : IInputActionCollection, IDisposable
         public InputAction @Move => m_Wrapper.m_GamePlay_Move;
         public InputAction @Attack => m_Wrapper.m_GamePlay_Attack;
         public InputAction @Jump => m_Wrapper.m_GamePlay_Jump;
+        public InputAction @Snowballhit => m_Wrapper.m_GamePlay_Snowballhit;
         public InputActionMap Get() { return m_Wrapper.m_GamePlay; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -269,6 +291,9 @@ public class @PlayerInputaction : IInputActionCollection, IDisposable
                 @Jump.started -= m_Wrapper.m_GamePlayActionsCallbackInterface.OnJump;
                 @Jump.performed -= m_Wrapper.m_GamePlayActionsCallbackInterface.OnJump;
                 @Jump.canceled -= m_Wrapper.m_GamePlayActionsCallbackInterface.OnJump;
+                @Snowballhit.started -= m_Wrapper.m_GamePlayActionsCallbackInterface.OnSnowballhit;
+                @Snowballhit.performed -= m_Wrapper.m_GamePlayActionsCallbackInterface.OnSnowballhit;
+                @Snowballhit.canceled -= m_Wrapper.m_GamePlayActionsCallbackInterface.OnSnowballhit;
             }
             m_Wrapper.m_GamePlayActionsCallbackInterface = instance;
             if (instance != null)
@@ -282,6 +307,9 @@ public class @PlayerInputaction : IInputActionCollection, IDisposable
                 @Jump.started += instance.OnJump;
                 @Jump.performed += instance.OnJump;
                 @Jump.canceled += instance.OnJump;
+                @Snowballhit.started += instance.OnSnowballhit;
+                @Snowballhit.performed += instance.OnSnowballhit;
+                @Snowballhit.canceled += instance.OnSnowballhit;
             }
         }
     }
@@ -300,5 +328,6 @@ public class @PlayerInputaction : IInputActionCollection, IDisposable
         void OnMove(InputAction.CallbackContext context);
         void OnAttack(InputAction.CallbackContext context);
         void OnJump(InputAction.CallbackContext context);
+        void OnSnowballhit(InputAction.CallbackContext context);
     }
 }
