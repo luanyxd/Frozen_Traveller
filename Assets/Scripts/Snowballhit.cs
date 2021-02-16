@@ -6,24 +6,24 @@ public class Snowballhit : MonoBehaviour
 {
     public GameObject snowballPrefab;
 
-    private PlayerInputaction controls;
+    //private PlayerInputaction controls;
 
-    void Awake()
-    {
-        controls = new PlayerInputaction();
-        controls.GamePlay.Snowballhit.started += ctx => Shoot();
+    //void Awake()
+    //{
+    //    controls = new PlayerInputaction();
+    //    controls.GamePlay.Snowballhit.started += ctx => Shoot();
 
-    }
+    //}
 
-    void OnEnable()
-    {
-        controls.GamePlay.Enable();
-    }
+    //void OnEnable()
+    //{
+    //    controls.GamePlay.Enable();
+    //}
 
-    void OnDisable()
-    {
-        controls.GamePlay.Disable();
-    }
+    //void OnDisable()
+    //{
+    //    controls.GamePlay.Disable();
+    //}
 
     // Start is called before the first frame update
     void Start()

@@ -14,29 +14,29 @@ public class playercontroller : MonoBehaviour
     private bool isGround;
     private bool canDoubleJump;
 
-    private PlayerInputaction controls;
+    //private PlayerInputaction controls;
     private Vector2 move;
-    void Awake()
-    {
-        controls = new PlayerInputaction();
+    //void Awake()
+    //{
+    //    controls = new PlayerInputaction();
         
-        controls.GamePlay.Move.performed += ctx => move = ctx.ReadValue<Vector2>();
-        controls.GamePlay.Move.canceled += ctx => move = Vector2.zero;
-        controls.GamePlay.Attack.started += ctx => Attack();
-        controls.GamePlay.Jump.started += ctx => Jump();
+    //    controls.GamePlay.Move.performed += ctx => move = ctx.ReadValue<Vector2>();
+    //    controls.GamePlay.Move.canceled += ctx => move = Vector2.zero;
+    //    controls.GamePlay.Attack.started += ctx => Attack();
+    //    controls.GamePlay.Jump.started += ctx => Jump();
         
         
 
-    }
-    void OnEnable()
-    {
-        controls.GamePlay.Enable();
-    }
+    //}
+    //void OnEnable()
+    //{
+    //    controls.GamePlay.Enable();
+    //}
 
-    void OnDisable()
-    {
-        controls.GamePlay.Disable();
-    }
+    //void OnDisable()
+    //{
+    //    controls.GamePlay.Disable();
+    //}
 
 
 
