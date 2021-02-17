@@ -8,7 +8,7 @@ public class MainMenu : MonoBehaviour
     public void PlayGame()
     {
         // LoadScene("SceneName") give the name of the next scene
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+        FindObjectOfType<LevelChanger>().FadeToNextLevel();
     }
 
     public void QuitGame()

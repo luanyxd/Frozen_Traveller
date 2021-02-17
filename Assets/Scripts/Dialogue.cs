@@ -5,8 +5,18 @@ using UnityEngine;
 [System.Serializable]
 public class Dialogue
 {
-    public string name; // NPC name
+    [System.Serializable]
+    public struct nameSentence
+    {
+        public bool isNPC; // NPC name
+        [TextArea]
+        public string sentence;
+    }
 
-    [TextArea(3, 10)]
-    public string[] sentences;
+
+    public string npcName;
+    public nameSentence[] nameSentences;
+
+    
 }
+

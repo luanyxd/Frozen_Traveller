@@ -27,9 +27,6 @@ public class PipeNPC : MonoBehaviour
             communicating = 2;
             FindObjectOfType<playercontroller>().enableMoving = false;
             FindObjectOfType<DialogueTrigger>().TriggerDialogue();
-            FindObjectOfType<playercontroller>().enableMoving = true;
-            Debug.Log("end dialog");
-            communicating = 3;
         }
     }
 }

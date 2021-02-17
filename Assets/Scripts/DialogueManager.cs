@@ -11,35 +11,45 @@ public class DialogueManager : MonoBehaviour
 
     public Animator animator;
 
-    private Queue<string> sentences; // FIFO Collection
+    private Queue<Dialogue.nameSentence> nameSentences; // FIFO Collection
+    private string npcName;
 
     // Start is called before the first frame update
     void Start()
     {
-        sentences = new Queue<string>();
+        nameSentences = new Queue<Dialogue.nameSentence>();
     }
 
     public void StartDialogue(Dialogue dialogue)
     {
         animator.SetBool("IsOpen", true);
-        nameText.text = dialogue.name;
-        sentences.Clear();
-        foreach (string sentence in dialogue.sentences)
+        nameText.text = dialogue.npcName;
+        npcName = dialogue.npcName;
+        nameSentences.Clear();
+        foreach (Dialogue.nameSentence nameSentence in dialogue.nameSentences)
         {
-            sentences.Enqueue(sentence);
+            nameSentences.Enqueue(nameSentence);
         }
         DisplayNextSentence();
     }
 
     public void DisplayNextSentence()
     {
-        if (sentences.Count == 0)
+        if (nameSentences.Count == 0)
         {
             EndDialogue();
             return;
         }
 
-        string sentence = sentences.Dequeue();
+        Dialogue.nameSentence nameSentence = nameSentences.Dequeue();
+        string sentence = nameSentence.sentence;
+        if (nameSentence.isNPC)
+        {
+            nameText.text = npcName;
+        } else
+        {
+            nameText.text = "Snowman";
+        }
         StopAllCoroutines();
         StartCoroutine(TypeSentence(sentence));
     }
@@ -57,5 +67,7 @@ public class DialogueManager : MonoBehaviour
     void EndDialogue()
     {
         animator.SetBool("IsOpen", false);
+        FindObjectOfType<PipeNPC>().communicating = 3;
+        FindObjectOfType<playercontroller>().enableMoving = true;
     }
 }

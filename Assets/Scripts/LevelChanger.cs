@@ -7,14 +7,14 @@ public class LevelChanger : MonoBehaviour
     public Animator animator;
     private int levelToLoad;
 
-    // Update is called once per frame
-    void Update()
-    {
-        if (Input.GetMouseButtonDown(0))
-        {
-            FadeToNextLevel();
-        }
-    }
+    //// Update is called once per frame
+    //void Update()
+    //{
+    //    if (Input.GetMouseButtonDown(0))
+    //    {
+    //        FadeToNextLevel();
+    //    }
+    //}
 
     public void FadeToNextLevel()
     {
