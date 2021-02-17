@@ -7,6 +7,7 @@ public class playercontroller : MonoBehaviour
     public float speed;
     public float jumpSpeed;
     public float doubleJumpSpeed;
+    public bool enableMoving;
 
     private Rigidbody2D rb2d;
     private Animator anim;
@@ -45,7 +46,8 @@ public class playercontroller : MonoBehaviour
     {
         rb2d = GetComponent<Rigidbody2D>();
         anim = GetComponent<Animator>();
-        myFeet = GetComponent<BoxCollider2D>(); 
+        myFeet = GetComponent<BoxCollider2D>();
+        enableMoving = true;
     }
 
     // Update is called once per frame
@@ -66,13 +68,15 @@ public class playercontroller : MonoBehaviour
     }
     void Run()
     {
-       // float moveDir = Input.GetAxis("Horizontal");
-        //Vector2 playerVel = new Vector2(moveDir * speed, rb2d.velocity.y);
-       Vector2 playerVel = new Vector2(move.x * speed, rb2d.velocity.y);
-        rb2d.velocity = playerVel;
-        bool playerHasXSpeed = Mathf.Abs(rb2d.velocity.x) > Mathf.Epsilon;
-        anim.SetBool("Run", playerHasXSpeed);
-
+        if (enableMoving)
+        {
+            float moveDir = Input.GetAxis("Horizontal");
+            Vector2 playerVel = new Vector2(moveDir * speed, rb2d.velocity.y);
+           //Vector2 playerVel = new Vector2(move.x * speed, rb2d.velocity.y);
+            rb2d.velocity = playerVel;
+            bool playerHasXSpeed = Mathf.Abs(rb2d.velocity.x) > Mathf.Epsilon;
+            anim.SetBool("Run", playerHasXSpeed);
+        }
     }
     void Flip()
     {
@@ -94,7 +98,7 @@ public class playercontroller : MonoBehaviour
     void Jump()
     {
       
-        //if (Input.GetButtonDown("Jump"))
+        if (Input.GetButtonDown("Jump"))
         {
             if (isGround)
             {

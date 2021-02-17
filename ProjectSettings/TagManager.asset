@@ -37,7 +37,6 @@ TagManager:
   - 
   - 
   - 
-  - 
   m_SortingLayers:
   - name: Sky
     uniqueID: 522607291
@@ -53,4 +52,7 @@ TagManager:
     locked: 0
   - name: Item
     uniqueID: 3780652011
+    locked: 0
+  - name: Player
+    uniqueID: 793544371
     locked: 0
