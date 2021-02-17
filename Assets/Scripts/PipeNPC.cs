@@ -6,11 +6,13 @@ public class PipeNPC : MonoBehaviour
 {
 
     public int communicating; // 1 - default, no communication; 2 - is communicating; 3 - has communicated
+    public GameObject movingCanvas;
     private GameObject player;
 
     void Start()
     {
         player = GameObject.Find("player");
+        movingCanvas = GameObject.Find("Canvas-Moving and Action");
         communicating = 1;
     }
 
@@ -20,11 +22,15 @@ public class PipeNPC : MonoBehaviour
         if (communicating == 1 && Mathf.Abs(player.transform.position.x - gameObject.transform.position.x) < 1)
         {
             // start conversation
+            Debug.Log("start communicating");
 
-            // TODO: disable moving and jumping UI
+            // disable moving and jumping UI
+            movingCanvas.SetActive(false);
+            FindObjectOfType<playercontroller>().joystick.SnapX = false;
 
             // trigger conversation
             communicating = 2;
+            StopAllCoroutines();
             FindObjectOfType<playercontroller>().enableMoving = false;
             FindObjectOfType<DialogueTrigger>().TriggerDialogue();
         }

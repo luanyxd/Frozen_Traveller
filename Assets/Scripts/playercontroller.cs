@@ -7,7 +7,10 @@ public class playercontroller : MonoBehaviour
     public float speed;
     public float jumpSpeed;
     public float doubleJumpSpeed;
+
     public bool enableMoving;
+
+    public Joystick joystick;
 
     private Rigidbody2D rb2d;
     private Animator anim;
@@ -70,7 +73,23 @@ public class playercontroller : MonoBehaviour
     {
         if (enableMoving)
         {
-            float moveDir = Input.GetAxis("Horizontal");
+
+            float moveDir;
+
+            // Add joystick, make the movement not that sensitive
+            if (joystick.Horizontal >= .2f)
+            {
+                moveDir = joystick.Horizontal;
+            } else if (joystick.Horizontal <= .2f)
+            {
+                moveDir = -joystick.Horizontal;
+            } else
+            {
+                moveDir = 0f;
+            }
+
+            //float moveDir = Input.GetAxis("Horizontal");
+            moveDir = joystick.Horizontal;
             Vector2 playerVel = new Vector2(moveDir * speed, rb2d.velocity.y);
            //Vector2 playerVel = new Vector2(move.x * speed, rb2d.velocity.y);
             rb2d.velocity = playerVel;
@@ -97,7 +116,6 @@ public class playercontroller : MonoBehaviour
     
     void Jump()
     {
-      
         if (Input.GetButtonDown("Jump"))
         {
             if (isGround)

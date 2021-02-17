@@ -38,6 +38,7 @@ public class DialogueManager : MonoBehaviour
         if (nameSentences.Count == 0)
         {
             EndDialogue();
+            Debug.Log("calling EndDialog ==================================================");
             return;
         }
 
@@ -69,5 +70,10 @@ public class DialogueManager : MonoBehaviour
         animator.SetBool("IsOpen", false);
         FindObjectOfType<PipeNPC>().communicating = 3;
         FindObjectOfType<playercontroller>().enableMoving = true;
+
+        // TODO: display joystick
+
+        //FindObjectOfType<PipeNPC>().movingCanvas.SetActive(true);
+        Debug.Log("calling EndDialog");
     }
 }
