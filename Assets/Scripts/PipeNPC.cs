@@ -31,7 +31,7 @@ public class PipeNPC : MonoBehaviour
             // trigger conversation
             communicating = 2;
             StopAllCoroutines();
-            FindObjectOfType<playercontroller>().enableMoving = false;
+            playercontroller.enableMoving = false;
             FindObjectOfType<DialogueTrigger>().TriggerDialogue();
         }
     }

@@ -8,7 +8,7 @@ public class playercontroller : MonoBehaviour
     public float jumpSpeed;
     public float doubleJumpSpeed;
 
-    public bool enableMoving;
+    public static bool enableMoving;
 
     public Joystick joystick;
 
