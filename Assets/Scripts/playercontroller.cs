@@ -14,6 +14,9 @@ public class playercontroller : MonoBehaviour
     // joystick
     public Joystick joystick;
 
+    // change mode button
+    public bool isNormal;
+
     // health bar
     public int maxHealth = 100;
     public int currentHealth;
@@ -155,7 +158,7 @@ public class playercontroller : MonoBehaviour
             anim.SetBool("idle", true);
         }
     }
-    void Attack()
+    public void Attack()
     {
        // if (Input.GetButtonDown("Attack"))
         {
@@ -164,9 +167,15 @@ public class playercontroller : MonoBehaviour
        // anim.SetBool("idle", true);
     }
 
-    void TakeDamage(int damage)
+    public void TakeDamage(int damage)
     {
         currentHealth -= damage;
         healthBar.SetHealth(currentHealth);
+    }
+
+    // TODO: change mode, flipping isNormal variable
+    public void ChangeMode()
+    {
+
     }
 }
