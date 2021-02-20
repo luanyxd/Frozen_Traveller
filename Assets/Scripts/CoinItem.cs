@@ -4,6 +4,9 @@ using UnityEngine;
 
 public class CoinItem : MonoBehaviour
 {
+
+    public playercontroller player;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -22,6 +25,10 @@ public class CoinItem : MonoBehaviour
         {
             //change the number of coins
             Destroy(gameObject);
+
+            //
+            //player.increaseCoin();
+
         }
     }
 }
