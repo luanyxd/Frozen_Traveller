@@ -78,7 +78,7 @@ public class playercontroller : MonoBehaviour
     {
         Run();
         Flip();
-        Jump();
+        //Jump();
         CheckGrounded();
        // SwitchAnimation();
         //Attack();
@@ -134,27 +134,21 @@ public class playercontroller : MonoBehaviour
     }
       
     
-    void Jump()
+    public void Jump()
     {
-        float verticalMove = joystick.Vertical;
-        //if (Input.GetButtonDown("Jump"))
-        if (verticalMove > .2f)
+        if (isGround)
         {
-            if (isGround)
+            Vector2 jumpVel = new Vector2(0.0f, jumpSpeed);
+            rb2d.velocity = Vector2.up * jumpVel;
+            canDoubleJump = true;
+        }
+        else
+        {
+            if(canDoubleJump)
             {
-                Debug.Log("jumping!");
-                Vector2 jumpVel = new Vector2(0.0f, jumpSpeed);
-                rb2d.velocity = Vector2.up * jumpVel;
-                canDoubleJump = true;
-            }
-            else
-            {
-                if(canDoubleJump)
-                {
-                    Vector2 doubleJumpVel = new Vector2(0.0f,doubleJumpSpeed);
-                    rb2d.velocity = Vector2.up * doubleJumpVel;
-                    canDoubleJump = false;
-                }
+                Vector2 doubleJumpVel = new Vector2(0.0f,doubleJumpSpeed);
+                rb2d.velocity = Vector2.up * doubleJumpVel;
+                canDoubleJump = false;
             }
         }
     }
