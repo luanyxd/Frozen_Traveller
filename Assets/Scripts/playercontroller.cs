@@ -8,9 +8,17 @@ public class playercontroller : MonoBehaviour
     public float jumpSpeed;
     public float doubleJumpSpeed;
 
+    // control moving ability
     public static bool enableMoving;
 
+    // joystick
     public Joystick joystick;
+
+    // health bar
+    public int maxHealth = 100;
+    public int currentHealth;
+    public HealthBar healthBar;
+
 
     private Rigidbody2D rb2d;
     private Animator anim;
@@ -50,7 +58,11 @@ public class playercontroller : MonoBehaviour
         rb2d = GetComponent<Rigidbody2D>();
         anim = GetComponent<Animator>();
         myFeet = GetComponent<BoxCollider2D>();
+
         enableMoving = true;
+
+        currentHealth = maxHealth;
+        healthBar.SetMaximum(maxHealth);
     }
 
     // Update is called once per frame
@@ -150,5 +162,11 @@ public class playercontroller : MonoBehaviour
             anim.SetTrigger("Attack");
         }
        // anim.SetBool("idle", true);
+    }
+
+    void TakeDamage(int damage)
+    {
+        currentHealth -= damage;
+        healthBar.SetHealth(currentHealth);
     }
 }
