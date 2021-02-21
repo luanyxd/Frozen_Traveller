@@ -2,10 +2,33 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
 
 public class HealthBar : MonoBehaviour
 {
+    public TMP_Text healthText;
+    public static int HealthCurrent;
+    public static int HealthMax;
+
+    private Image healthBar;
+
+    void Start()
+    {
+        healthBar = GetComponent<Image>();
+        //HealthCurrent = HealthMax;
+    }
+
+    void Update()
+    {
+        healthBar.fillAmount = (float)HealthCurrent / (float)HealthMax;
+        healthText.text = HealthCurrent.ToString() + "/" + HealthMax.ToString();
+
+
+    }
+
+    /*
     public Slider slider;
+
 
     public void SetMaximum(int health)
     {
@@ -17,7 +40,7 @@ public class HealthBar : MonoBehaviour
     {
         slider.value = health;
     }
-
+    */
     //// player health framework codes
 
     //public int maxHealth = 100;

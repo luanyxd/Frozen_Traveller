@@ -69,8 +69,8 @@ public class playercontroller : MonoBehaviour
 
         enableMoving = true;
 
-        currentHealth = maxHealth;
-        healthBar.SetMaximum(maxHealth);
+       // currentHealth = maxHealth;
+        //healthBar.SetMaximum(maxHealth);
     }
 
     // Update is called once per frame
@@ -183,7 +183,7 @@ public class playercontroller : MonoBehaviour
         }
         // anim.SetBool("idle", true);
     }
-
+    /*
     public void TakeDamage(int damage)
     {
         currentHealth -= damage;
@@ -191,6 +191,7 @@ public class playercontroller : MonoBehaviour
     }
 
     // TODO: change mode, flipping isNormal variable
+     */
     public void ChangeMode()
     {
         if (canAngry && isNormal)
