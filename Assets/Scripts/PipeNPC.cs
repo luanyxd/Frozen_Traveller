@@ -23,10 +23,11 @@ public class PipeNPC : MonoBehaviour
         {
             // start conversation
             Debug.Log("start communicating");
+            Time.timeScale = 0f;
 
             // disable moving and jumping UI
-            movingCanvas.SetActive(false);
-            FindObjectOfType<playercontroller>().joystick.SnapX = false;
+            //movingCanvas.SetActive(false);
+            //FindObjectOfType<playercontroller>().joystick.SnapX = false;
 
             // trigger conversation
             communicating = 2;

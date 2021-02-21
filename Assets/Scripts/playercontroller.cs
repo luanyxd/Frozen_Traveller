@@ -16,11 +16,16 @@ public class playercontroller : MonoBehaviour
 
     // change mode button
     public bool isNormal;
+    public bool canAngry;
+
 
     // health bar
     public int maxHealth = 100;
     public int currentHealth;
     public HealthBar healthBar;
+
+    // coin amount displayer
+    public CoinCollectedDisplayer coinCollectedDisplayer;
 
 
     private Rigidbody2D rb2d;
@@ -82,7 +87,7 @@ public class playercontroller : MonoBehaviour
     void CheckGrounded()
     {
         isGround = myFeet.IsTouchingLayers(LayerMask.GetMask("Ground"));
-        //Debug.Log(isGround);
+        Debug.Log(isGround);
     }
     void Run()
     {
@@ -134,24 +139,31 @@ public class playercontroller : MonoBehaviour
     }
 
 
-    void Jump()
+
+      
+    
+    public void Jump()
+
     {
-        if (Input.GetButtonDown("Jump"))
+        if (isGround)
         {
-            if (isGround)
+            Vector2 jumpVel = new Vector2(0.0f, jumpSpeed);
+            rb2d.velocity = Vector2.up * jumpVel;
+            canDoubleJump = true;
+        }
+        else
+        {
+            if(canDoubleJump)
             {
-                Vector2 jumpVel = new Vector2(0.0f, jumpSpeed);
-                rb2d.velocity = Vector2.up * jumpVel;
-                canDoubleJump = true;
-            }
-            else
-            {
+
                 if (canDoubleJump)
                 {
                     Vector2 doubleJumpVel = new Vector2(0.0f, doubleJumpSpeed);
                     rb2d.velocity = Vector2.up * doubleJumpVel;
                     canDoubleJump = false;
                 }
+
+
             }
         }
     }
@@ -181,6 +193,16 @@ public class playercontroller : MonoBehaviour
     // TODO: change mode, flipping isNormal variable
     public void ChangeMode()
     {
+        if (canAngry && isNormal)
+        {
+            // TODO: change to angry mode
+            isNormal = false;
+        }
+    }
 
+    public void IncreaseCoin()
+    {
+        //coinAmount++;
+        coinCollectedDisplayer.IncreaseCoin();
     }
 }
