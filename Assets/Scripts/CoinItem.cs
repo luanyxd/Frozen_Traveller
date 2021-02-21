@@ -24,6 +24,7 @@ public class CoinItem : MonoBehaviour
         if (other.gameObject.CompareTag("Player") && other.GetType().ToString()== "UnityEngine.CapsuleCollider2D")
         {
             //change the number of coins
+            CoinCollectedDisplayer.currentamount += 1;
             Destroy(gameObject);
 
             //

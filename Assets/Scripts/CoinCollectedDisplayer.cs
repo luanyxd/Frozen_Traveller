@@ -6,18 +6,25 @@ using TMPro;
 public class CoinCollectedDisplayer : MonoBehaviour
 {
     public TMP_Text amountText;
-    public int amount;
+    public int startamount;
+    public static int currentamount;
 
     // Start is called before the first frame update
     void Start()
     {
-        amount = 0;
-        amountText.text = amount.ToString();
+        startamount = 0;
+        //Debug.Log(currentamount);
+        currentamount = startamount;
+        //amountText.text = amount.ToString();
     }
-
-    public void IncreaseCoin()
+    void Update()
+    {
+        //Debug.Log(currentamount);
+        amountText.text = currentamount.ToString();
+    }
+    /*public void IncreaseCoin()
     {
         amount++;
         amountText.text = amount.ToString();
-    }
+    }*/
 }
