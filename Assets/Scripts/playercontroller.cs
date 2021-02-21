@@ -202,7 +202,7 @@ public class playercontroller : MonoBehaviour
 
     public void IncreaseCoin()
     {
-        //coinAmount++;
-        coinCollectedDisplayer.IncreaseCoin();
+        ////coinAmount++;
+        //coinCollectedDisplayer.IncreaseCoin();
     }
 }
