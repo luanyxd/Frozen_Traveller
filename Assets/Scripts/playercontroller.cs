@@ -34,13 +34,13 @@ public class playercontroller : MonoBehaviour
     //void Awake()
     //{
     //    controls = new PlayerInputaction();
-        
+
     //    controls.GamePlay.Move.performed += ctx => move = ctx.ReadValue<Vector2>();
     //    controls.GamePlay.Move.canceled += ctx => move = Vector2.zero;
     //    controls.GamePlay.Attack.started += ctx => Attack();
     //    controls.GamePlay.Jump.started += ctx => Jump();
-        
-        
+
+
 
     //}
     //void OnEnable()
@@ -75,7 +75,7 @@ public class playercontroller : MonoBehaviour
         Flip();
         //Jump();
         CheckGrounded();
-       // SwitchAnimation();
+        // SwitchAnimation();
         //Attack();
 
     }
@@ -86,6 +86,7 @@ public class playercontroller : MonoBehaviour
     }
     void Run()
     {
+
         if (enableMoving)
         {
 
@@ -95,22 +96,26 @@ public class playercontroller : MonoBehaviour
             if (joystick.Horizontal >= .2f)
             {
                 moveDir = joystick.Horizontal;
-            } else if (joystick.Horizontal <= .2f)
+            }
+            else if (joystick.Horizontal <= .2f)
             {
                 moveDir = -joystick.Horizontal;
-            } else
+            }
+            else
             {
                 moveDir = 0f;
             }
 
-            //float moveDir = Input.GetAxis("Horizontal");
+            //moveDir = Input.GetAxis("Horizontal");
             moveDir = joystick.Horizontal;
             Vector2 playerVel = new Vector2(moveDir * speed, rb2d.velocity.y);
-           //Vector2 playerVel = new Vector2(move.x * speed, rb2d.velocity.y);
+            //Vector2 playerVel = new Vector2(move.x * speed, rb2d.velocity.y);
             rb2d.velocity = playerVel;
             bool playerHasXSpeed = Mathf.Abs(rb2d.velocity.x) > Mathf.Epsilon;
             anim.SetBool("Run", playerHasXSpeed);
+
         }
+
     }
     void Flip()
     {
@@ -127,8 +132,8 @@ public class playercontroller : MonoBehaviour
             }
         }
     }
-      
-    
+
+
     void Jump()
     {
         if (Input.GetButtonDown("Jump"))
@@ -141,9 +146,9 @@ public class playercontroller : MonoBehaviour
             }
             else
             {
-                if(canDoubleJump)
+                if (canDoubleJump)
                 {
-                    Vector2 doubleJumpVel = new Vector2(0.0f,doubleJumpSpeed);
+                    Vector2 doubleJumpVel = new Vector2(0.0f, doubleJumpSpeed);
                     rb2d.velocity = Vector2.up * doubleJumpVel;
                     canDoubleJump = false;
                 }
@@ -160,11 +165,11 @@ public class playercontroller : MonoBehaviour
     }
     public void Attack()
     {
-       // if (Input.GetButtonDown("Attack"))
+        // if (Input.GetButtonDown("Attack"))
         {
             anim.SetTrigger("Attack");
         }
-       // anim.SetBool("idle", true);
+        // anim.SetBool("idle", true);
     }
 
     public void TakeDamage(int damage)
