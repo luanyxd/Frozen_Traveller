@@ -9,7 +9,7 @@ public class CollectCube : MonoBehaviour
     void OnTriggerEnter2D(Collider2D other)
     {
 
-        Debug.Log("square: " + other);
+        Debug.Log("Entered a collectSquare!");
         GlobalAchieve.ach01Count += 1;
         Debug.Log("count: " + GlobalAchieve.ach01Count);
         //collectSound.Play();

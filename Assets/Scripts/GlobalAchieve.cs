@@ -18,6 +18,9 @@ public class GlobalAchieve : MonoBehaviour
     public int ach01Trigger = 3;
     public int ach01Code = 0;
 
+    public int ach02Code = 0;
+    public static bool ach02Trigger = false;
+
     void Start()
     {
         PlayerPrefs.DeleteAll();
@@ -27,11 +30,15 @@ public class GlobalAchieve : MonoBehaviour
     void Update()
     {
         ach01Code = PlayerPrefs.GetInt("Ach01");
-        //Debug.Log("Hello: " + ach01Count + "," + ach01Code);
+        ach02Code = PlayerPrefs.GetInt("Ach02");
         if (ach01Count == ach01Trigger && ach01Code != 1)
         {
-            Debug.Log("Hello: " + ach01Count);
+            Debug.Log("Ach01 Triggered!" + ach01Count);
             StartCoroutine(Trigger01Ach());
+        }
+        if (ach02Code != 1 && ach02Trigger == true)
+        {
+            StartCoroutine(Trigger02Ach());
         }
     }
 
@@ -50,6 +57,27 @@ public class GlobalAchieve : MonoBehaviour
 
         achTitle.GetComponent<Text>().text = "COLLECTION!";
         achDesc.GetComponent<Text>().text = "Created a collection based achievement!";
+        achNote.SetActive(true);
+        yield return new WaitForSeconds(7);
+        //resetting UI
+        achNote.SetActive(false);
+        ach01Image.SetActive(false);
+        achTitle.GetComponent<Text>().text = "";
+        achDesc.GetComponent<Text>().text = "";
+        achActive = false;
+    }
+
+    IEnumerator Trigger02Ach()
+    {
+        achActive = true;
+        ach02Code = 1;
+        PlayerPrefs.SetInt("Ach02", ach02Code);
+
+        //achSound.Play();
+        ach01Image.SetActive(true);
+
+        achTitle.GetComponent<Text>().text = "LEVEL COMPLETE!";
+        achDesc.GetComponent<Text>().text = "Created a level completed based achievement!";
         achNote.SetActive(true);
         yield return new WaitForSeconds(7);
         //resetting UI
