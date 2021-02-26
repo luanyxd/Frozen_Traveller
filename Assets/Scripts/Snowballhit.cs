@@ -39,7 +39,7 @@ public class Snowballhit : MonoBehaviour
 
     public void Shoot()
     {
-        snowballPrefab.SetActive(true);
+        //snowballPrefab.SetActive(true);
         Instantiate(snowballPrefab, transform.position, transform.rotation);
     }
 
