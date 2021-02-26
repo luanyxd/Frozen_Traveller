@@ -1692,6 +1692,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 6
   jumpSpeed: 8
+  doubleJumpSpeed: 0
+  joystick: {fileID: 0}
+  isNormal: 0
+  canAngry: 0
+  maxHealth: 100
+  currentHealth: 0
+  healthBar: {fileID: 0}
+  coinCollectedDisplayer: {fileID: 0}
 --- !u!1 &1411871425
 GameObject:
   m_ObjectHideFlags: 0
