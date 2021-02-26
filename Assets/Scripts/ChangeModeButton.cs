@@ -8,6 +8,7 @@ public class ChangeModeButton : MonoBehaviour
 
     public void ChangeMode()
     {
-        player.ChangeMode();
+        //player.ChangeMode();
+        StartCoroutine(player.BecomeAngryCoroutine());
     }
 }

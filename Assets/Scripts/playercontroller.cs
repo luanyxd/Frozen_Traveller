@@ -17,6 +17,12 @@ public class playercontroller : MonoBehaviour
     // change mode button
     public bool isNormal;
     public bool canAngry;
+    public int angryDuration;
+
+    // clock
+    public GameObject timeDisplayer;
+    public Clock countdownClock;
+    public Animator clockAnim;
 
 
     // health bar
@@ -69,8 +75,14 @@ public class playercontroller : MonoBehaviour
 
         enableMoving = true;
 
-       // currentHealth = maxHealth;
+        // currentHealth = maxHealth;
         //healthBar.SetMaximum(maxHealth);
+
+        canAngry = true;
+        isNormal = true;
+        angryDuration = 5;
+
+        countdownClock.timeActive = false;
     }
 
     // Update is called once per frame
@@ -192,12 +204,45 @@ public class playercontroller : MonoBehaviour
 
     // TODO: change mode, flipping isNormal variable
      */
+    
+    // change mode by button
     public void ChangeMode()
     {
         if (canAngry && isNormal)
         {
             // TODO: change to angry mode
             isNormal = false;
+            anim.SetBool("Angry", true);
+        } else if (!isNormal)
+        {
+            isNormal = true;
+            anim.SetBool("Angry", false);
+        }
+    }
+
+    // change mode automatically if get item
+    public IEnumerator BecomeAngryCoroutine()
+    {
+        if (isNormal)
+        {
+            // change to angry mode and animation
+            isNormal = false;
+            anim.SetBool("Angry", true);
+
+            // TODO: wait for several seconds
+            clockAnim.SetBool("DisplayClock", true);
+            countdownClock.clock = angryDuration;
+            countdownClock.timeActive = true;
+            timeDisplayer.SetActive(true);
+            yield return new WaitForSeconds(angryDuration);
+
+            // TODO: back to ordinary mode
+            clockAnim.SetBool("DisplayClock", false);
+            yield return new WaitForSeconds(1f);
+            timeDisplayer.SetActive(false);
+            countdownClock.timeActive = false;
+            isNormal = true;
+            anim.SetBool("Angry", false);
         }
     }
 
