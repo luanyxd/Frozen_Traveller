@@ -5,10 +5,13 @@ using UnityEngine;
 public class Rock : MonoBehaviour
 {
     public Rigidbody2D rb;
+    public int damage;
+    private PlayerHealth playerHealth;
     // Start is called before the first frame update
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
+        playerHealth = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerHealth>();
     }
 
     // Update is called once per frame
@@ -21,7 +24,10 @@ public class Rock : MonoBehaviour
         if (other.gameObject.CompareTag("Player") && other.GetType().ToString() == "UnityEngine.CapsuleCollider2D")
         {
             rb.isKinematic = false;
-            rb.velocity = new Vector2(-3, 0);
+            rb.gravityScale = 10;
+            rb.velocity = new Vector2(-10, 0);
+          
         }
     }
+
 }
