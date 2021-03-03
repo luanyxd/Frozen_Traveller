@@ -27,7 +27,7 @@ public class Fireball : MonoBehaviour
 
     void OnCollisionEnter2D(Collision2D other)
     {
-        if (other.gameObject.CompareTag("Player"))
+        if (other.gameObject.CompareTag("Player") && other.GetType().ToString() == "UnityEngine.CapsuleCollider2D")
         {
             rb.isKinematic = true;
             playerHealth.DamagePlayer(damage);
