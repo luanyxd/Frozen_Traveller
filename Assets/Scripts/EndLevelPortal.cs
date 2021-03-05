@@ -8,7 +8,7 @@ public class EndLevelPortal : MonoBehaviour
     void OnTriggerEnter2D(Collider2D other)
     {
         Debug.Log("Meet Portal");
-        gameManager.CompleteLevel();
+        gameManager.CompleteLevel(true);
         GlobalAchieve.ach02Trigger = true;
     }
 }

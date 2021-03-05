@@ -9,10 +9,11 @@ public class GameManager : MonoBehaviour
     public LevelComplete levelComplete;
     public TMP_Text coinAmount;
 
-    public void CompleteLevel()
+    public void CompleteLevel(bool winGame)
     {
         levelComplete.SetTimeAmount(Time.timeSinceLevelLoad);
         levelComplete.SetCoinAmount(coinAmount.text);
+        levelComplete.SetlevelMessage(winGame);
 
         // TODO: set history highest
 

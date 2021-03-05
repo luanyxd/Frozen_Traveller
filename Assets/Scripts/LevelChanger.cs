@@ -24,6 +24,12 @@ public class LevelChanger : MonoBehaviour
         StartCoroutine(LoadLevel(levelToLoad));
     }
 
+    public void LoadCurrentLevel()
+    {
+        levelToLoad = SceneManager.GetActiveScene().buildIndex;
+        StartCoroutine(LoadLevel(levelToLoad));
+    }
+
     public void LoadMainMenu()
     {
         StartCoroutine(LoadLevel(0));
