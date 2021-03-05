@@ -21,7 +21,7 @@ public class Hell : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
-            gameManager.CompleteLevel(true);
+            gameManager.CompleteLevel(false);
         }
     }
 }
