@@ -38,6 +38,9 @@ TagManager:
   - 
   - 
   m_SortingLayers:
+  - name: Hell
+    uniqueID: 3948569317
+    locked: 0
   - name: Sky
     uniqueID: 522607291
     locked: 0
