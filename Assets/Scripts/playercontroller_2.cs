@@ -34,11 +34,14 @@ public class playercontroller_2 : MonoBehaviour
     private Animator anim;
     private BoxCollider2D myFeet;
     private bool isGround;
+    private bool isMoving;
     private bool canDoubleJump;
 
 
     private Vector2 move;
     public Snowballhit snowballhit;
+
+    public AudioSource movingAudioSrc;
 
 
 
@@ -64,7 +67,7 @@ public class playercontroller_2 : MonoBehaviour
         CheckGrounded();
         // SwitchAnimation();
         Attack();
-
+        stepSound();
     }
     void CheckGrounded()
     {
@@ -101,10 +104,6 @@ public class playercontroller_2 : MonoBehaviour
             }
         }
     }
-
-
-
-
 
     public void Jump()
     {
@@ -172,5 +171,23 @@ public class playercontroller_2 : MonoBehaviour
     {
         ////coinAmount++;
         //coinCollectedDisplayer.IncreaseCoin();
+    }
+
+    public void stepSound()
+    {
+        if(rb2d.velocity.x != 0)
+            isMoving = true;
+        else
+            isMoving = false;
+        
+        if(isMoving && isGround){
+            if (!movingAudioSrc.isPlaying)
+            {
+                movingAudioSrc.Play();
+            }
+        }
+        else{
+            movingAudioSrc.Stop();
+        }
     }
 }
