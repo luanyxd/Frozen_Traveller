@@ -38,6 +38,7 @@ public class GlobalAchieve : MonoBehaviour
         }
         if (ach02Code != 1 && ach02Trigger == true)
         {
+            Debug.Log("Ach02 Triggered!");
             StartCoroutine(Trigger02Ach());
         }
     }

@@ -177,19 +177,16 @@ public class playercontroller_2 : MonoBehaviour
 
     public void stepSound()
     {
-        if(rb2d.velocity.x != 0)
+        if(Mathf.Abs(rb2d.velocity.x) > Mathf.Epsilon)
             isMoving = true;
         else
             isMoving = false;
         
         if(isMoving && isGround){
-            if (!movingAudioSrc.isPlaying)
-            {
-                movingAudioSrc.Play();
-            }
+            FindObjectOfType<AudioManager>().TurnOn("PlayerStep");
         }
         else{
-            movingAudioSrc.Stop();
+            FindObjectOfType<AudioManager>().TurnOff("PlayerStep");
         }
     }
 
