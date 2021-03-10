@@ -68,6 +68,8 @@ public class playercontroller_2 : MonoBehaviour
         // SwitchAnimation();
         Attack();
         stepSound();
+
+        Debug.Log(rb2d.velocity.x.ToString());
     }
     void CheckGrounded()
     {
@@ -189,5 +191,11 @@ public class playercontroller_2 : MonoBehaviour
         else{
             movingAudioSrc.Stop();
         }
+    }
+
+    public void setIdle()
+    {
+        rb2d.velocity = Vector2.zero;
+        enableMoving = false;
     }
 }
