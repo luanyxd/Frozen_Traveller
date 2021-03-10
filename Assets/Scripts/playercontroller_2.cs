@@ -175,7 +175,7 @@ public class playercontroller_2 : MonoBehaviour
 
     public void stepSound()
     {
-        if(rb2d.velocity.x != 0)
+        if(Mathf.Abs(rb2d.velocity.x) > Mathf.Epsilon)
             isMoving = true;
         else
             isMoving = false;
