@@ -181,13 +181,10 @@ public class playercontroller_2 : MonoBehaviour
             isMoving = false;
         
         if(isMoving && isGround){
-            if (!movingAudioSrc.isPlaying)
-            {
-                movingAudioSrc.Play();
-            }
+            FindObjectOfType<AudioManager>().TurnOn("PlayerStep");
         }
         else{
-            movingAudioSrc.Stop();
+            FindObjectOfType<AudioManager>().TurnOff("PlayerStep");
         }
     }
 }

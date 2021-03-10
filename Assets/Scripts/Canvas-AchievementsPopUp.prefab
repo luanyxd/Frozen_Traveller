@@ -11,7 +11,6 @@ GameObject:
   - component: {fileID: 9222937892396656154}
   - component: {fileID: 13396738025052618}
   - component: {fileID: 3457312978713054725}
-  - component: {fileID: 7168553823289700840}
   m_Layer: 10
   m_Name: AchievementPanel
   m_TagString: Untagged
@@ -78,27 +77,6 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
---- !u!114 &7168553823289700840
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6057681513394109552}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 49cc1a27ac6ae304185339e7611e2987, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  achNote: {fileID: 0}
-  achSound: {fileID: 0}
-  achActive: 0
-  achTitle: {fileID: 8915948415483095458}
-  achDesc: {fileID: 8467740992746141218}
-  ach01Image: {fileID: 6456868255663987207}
-  ach01Trigger: 3
-  ach01Code: 0
-  ach02Code: 0
 --- !u!1 &6456868255663987207
 GameObject:
   m_ObjectHideFlags: 0

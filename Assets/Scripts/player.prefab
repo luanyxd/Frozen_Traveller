@@ -192,6 +192,7 @@ MonoBehaviour:
   healthBar: {fileID: 0}
   coinCollectedDisplayer: {fileID: 0}
   snowballhit: {fileID: 0}
+  movingAudioSrc: {fileID: 0}
 --- !u!114 &166396653608544908
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -210,6 +211,10 @@ MonoBehaviour:
   joystick: {fileID: 0}
   isNormal: 0
   canAngry: 0
+  angryDuration: 0
+  timeDisplayer: {fileID: 0}
+  countdownClock: {fileID: 0}
+  clockAnim: {fileID: 0}
   maxHealth: 100
   currentHealth: 0
   healthBar: {fileID: 0}
