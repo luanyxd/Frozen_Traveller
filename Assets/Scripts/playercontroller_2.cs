@@ -69,7 +69,7 @@ public class playercontroller_2 : MonoBehaviour
         Attack();
         stepSound();
 
-        Debug.Log(rb2d.velocity.x.ToString());
+        //Debug.Log(rb2d.velocity.x);
     }
     void CheckGrounded()
     {
@@ -177,7 +177,7 @@ public class playercontroller_2 : MonoBehaviour
 
     public void stepSound()
     {
-        if(Mathf.Abs(rb2d.velocity.x) > Mathf.Epsilon)
+        if(Mathf.Abs(rb2d.velocity.x) > 0.1f)
             isMoving = true;
         else
             isMoving = false;
