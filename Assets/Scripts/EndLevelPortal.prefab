@@ -16,7 +16,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &4609141699840311133
 Transform:
   m_ObjectHideFlags: 0
@@ -172,6 +172,7 @@ MonoBehaviour:
   gameManager: {fileID: 0}
   hint: {fileID: 1123580167802166674}
   missonComplete: 0
+  dialogueTrigger: {fileID: 4179912018918648553}
 --- !u!1 &8649179756265780923
 GameObject:
   m_ObjectHideFlags: 0

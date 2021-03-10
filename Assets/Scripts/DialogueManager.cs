@@ -68,7 +68,6 @@ public class DialogueManager : MonoBehaviour
     void EndDialogue()
     {
         animator.SetBool("IsOpen", false);
-        FindObjectOfType<PipeNPC>().communicating = 3;
         playercontroller.enableMoving = true;
         Time.timeScale = 1f;
 
