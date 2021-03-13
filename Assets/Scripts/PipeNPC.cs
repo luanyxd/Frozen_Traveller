@@ -21,7 +21,7 @@ public class PipeNPC : MonoBehaviour
             //Time.timeScale = 0f;
             communicating = 2;
             //StopAllCoroutines();
-            playercontroller.enableMoving = false;
+            playercontroller_2.enableMoving = false;
             dialogueTrigger.TriggerDialogue();
             communicating = 3;
             if (FindObjectOfType<EndTrigger>() != null)
