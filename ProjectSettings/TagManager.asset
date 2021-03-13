@@ -50,6 +50,12 @@ TagManager:
   - name: Grass
     uniqueID: 443183403
     locked: 0
+  - name: Movingplatform
+    uniqueID: 788873219
+    locked: 0
+  - name: Water
+    uniqueID: 391430343
+    locked: 0
   - name: Default
     uniqueID: 0
     locked: 0

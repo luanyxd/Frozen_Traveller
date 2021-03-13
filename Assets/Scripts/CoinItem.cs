@@ -25,6 +25,7 @@ public class CoinItem : MonoBehaviour
         {
             //change the number of coins
             CoinCollectedDisplayer.currentamount += 1;
+            FindObjectOfType<AudioManager>().Play("Coin");
             FindObjectOfType<EndTrigger>().winConditions--;
             Destroy(gameObject);
 
