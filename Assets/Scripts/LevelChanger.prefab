@@ -662,7 +662,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4ba510b0b835b2144b4b157235829e61, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  transition: {fileID: 0}
+  transition: {fileID: 9011396917607919811}
   transitionTime: 1
 --- !u!1 &6054204456996777620
 GameObject:
