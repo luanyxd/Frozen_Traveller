@@ -53,19 +53,19 @@ MonoBehaviour:
     source: {fileID: 0}
   - name: Theme1
     clip: {fileID: 8300000, guid: 5cd5ecc1aa8546d4da2352e7d74a2bc9, type: 3}
-    volume: 0.5
+    volume: 1
     pitch: 1
     loop: 1
     source: {fileID: 0}
   - name: Hit
     clip: {fileID: 8300000, guid: 8ec32e085dc500243a1df3680f164189, type: 3}
-    volume: 0.5
+    volume: 1
     pitch: 1
     loop: 0
     source: {fileID: 0}
   - name: Coin
     clip: {fileID: 8300000, guid: 5ac6242608b593342802f2c42954d298, type: 3}
-    volume: 0.5
+    volume: 1
     pitch: 1
     loop: 0
     source: {fileID: 0}

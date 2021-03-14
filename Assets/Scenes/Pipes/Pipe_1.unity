@@ -858,6 +858,18 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 46c4cd22f54fdee4eb1da1e4095bac8f, type: 3}
+--- !u!114 &1744917174 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4434173321734429324, guid: 46c4cd22f54fdee4eb1da1e4095bac8f,
+    type: 3}
+  m_PrefabInstance: {fileID: 1744917173}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f2670da9c3d806d44b983d80991c1b72, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1854185098
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1478,6 +1490,31 @@ PrefabInstance:
         type: 3}
       propertyPath: m_AnchorMax.y
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3972098767940808419, guid: 0aa6769bd22383a4796ca851cdfaf846,
+        type: 3}
+      propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1744917174}
+    - target: {fileID: 3972098767940808419, guid: 0aa6769bd22383a4796ca851cdfaf846,
+        type: 3}
+      propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: SetThemeVolume
+      objectReference: {fileID: 0}
+    - target: {fileID: 3972098768168192006, guid: 0aa6769bd22383a4796ca851cdfaf846,
+        type: 3}
+      propertyPath: m_MinValue
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3972098768168192006, guid: 0aa6769bd22383a4796ca851cdfaf846,
+        type: 3}
+      propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1744917174}
+    - target: {fileID: 3972098768168192006, guid: 0aa6769bd22383a4796ca851cdfaf846,
+        type: 3}
+      propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: SetSoundEffectVolume
       objectReference: {fileID: 0}
     - target: {fileID: 3972098768392650624, guid: 0aa6769bd22383a4796ca851cdfaf846,
         type: 3}
