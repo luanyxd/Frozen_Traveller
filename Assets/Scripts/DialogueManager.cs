@@ -22,6 +22,8 @@ public class DialogueManager : MonoBehaviour
 
     public void StartDialogue(Dialogue dialogue)
     {
+        Debug.Log("Start Dialogue!");
+
         animator.SetBool("IsOpen", true);
         nameText.text = dialogue.npcName;
         npcName = dialogue.npcName;
@@ -35,6 +37,8 @@ public class DialogueManager : MonoBehaviour
 
     public void DisplayNextSentence()
     {
+        Debug.Log("Display next sentence!");
+
         if (nameSentences.Count == 0)
         {
             EndDialogue();

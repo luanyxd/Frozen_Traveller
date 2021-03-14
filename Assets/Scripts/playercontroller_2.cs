@@ -67,7 +67,7 @@ public class playercontroller_2 : MonoBehaviour
         CheckGrounded();
         // SwitchAnimation();
         Attack();
-        stepSound();
+        //stepSound();
 
         //Debug.Log(rb2d.velocity.x);
     }
