@@ -19,7 +19,12 @@ public class playercontroller_2 : MonoBehaviour
     // change mode button
     public bool isNormal;
     public bool canAngry;
+    public int angryDuration;
 
+    // clock
+    public GameObject timeDisplayer;
+    public Clock countdownClock;
+    public Animator clockAnim;
 
     // health bar
     public int maxHealth = 100;
@@ -146,6 +151,7 @@ public class playercontroller_2 : MonoBehaviour
     {
          if (Input.GetButtonDown("Attack"))
         {
+            anim.SetBool("idle", true);
             anim.SetTrigger("Attack");
             snowballhit.Shoot();
         }
@@ -169,6 +175,33 @@ public class playercontroller_2 : MonoBehaviour
         }
     }
 
+    public IEnumerator BecomeAngryCoroutine()
+    {
+        if (Input.GetButtonDown("ChangeMode"))
+        {
+            if (isNormal)
+            {
+                // change to angry mode and animation
+                isNormal = false;
+                anim.SetBool("Angry", true);
+
+                // TODO: wait for several seconds
+                clockAnim.SetBool("DisplayClock", true);
+                countdownClock.clock = angryDuration;
+                countdownClock.timeActive = true;
+                timeDisplayer.SetActive(true);
+                yield return new WaitForSeconds(angryDuration);
+
+                // TODO: back to ordinary mode
+                clockAnim.SetBool("DisplayClock", false);
+                yield return new WaitForSeconds(1f);
+                timeDisplayer.SetActive(false);
+                countdownClock.timeActive = false;
+                isNormal = true;
+                anim.SetBool("Angry", false);
+            }
+        }
+    }
     public void IncreaseCoin()
     {
         ////coinAmount++;
