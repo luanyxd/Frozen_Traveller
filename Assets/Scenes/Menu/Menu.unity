@@ -231,6 +231,75 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 65134441}
   m_CullTransparentMesh: 0
+--- !u!1001 &67325647
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 4434173321734429325, guid: 46c4cd22f54fdee4eb1da1e4095bac8f,
+        type: 3}
+      propertyPath: m_Name
+      value: AudioManager
+      objectReference: {fileID: 0}
+    - target: {fileID: 4434173321734429327, guid: 46c4cd22f54fdee4eb1da1e4095bac8f,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4434173321734429327, guid: 46c4cd22f54fdee4eb1da1e4095bac8f,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4434173321734429327, guid: 46c4cd22f54fdee4eb1da1e4095bac8f,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4434173321734429327, guid: 46c4cd22f54fdee4eb1da1e4095bac8f,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4434173321734429327, guid: 46c4cd22f54fdee4eb1da1e4095bac8f,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4434173321734429327, guid: 46c4cd22f54fdee4eb1da1e4095bac8f,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4434173321734429327, guid: 46c4cd22f54fdee4eb1da1e4095bac8f,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4434173321734429327, guid: 46c4cd22f54fdee4eb1da1e4095bac8f,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4434173321734429327, guid: 46c4cd22f54fdee4eb1da1e4095bac8f,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4434173321734429327, guid: 46c4cd22f54fdee4eb1da1e4095bac8f,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4434173321734429327, guid: 46c4cd22f54fdee4eb1da1e4095bac8f,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 46c4cd22f54fdee4eb1da1e4095bac8f, type: 3}
 --- !u!1 &125982675
 GameObject:
   m_ObjectHideFlags: 0
@@ -702,6 +771,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 297264969}
   m_CullTransparentMesh: 0
+--- !u!114 &310205657 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4434173321734429324, guid: 46c4cd22f54fdee4eb1da1e4095bac8f,
+    type: 3}
+  m_PrefabInstance: {fileID: 67325647}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f2670da9c3d806d44b983d80991c1b72, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &322575784
 GameObject:
   m_ObjectHideFlags: 0
@@ -1021,15 +1102,15 @@ MonoBehaviour:
     m_LineSpacing: 1
   m_Text: "Each file is composed of a single object type, one JSON-object per-line.\r\n\r\nTake
     a look at some examples to get you started: https://github.com/Yelp/dataset-examples.\r\n\r\nNote:
-    the follow examples contain inline comments, which are technically not valid
-    JSON. This is done here to simplify the documentation and explaining the structure,
+    the follow examples contain inline comments, which are technically not valid JSON.
+    This is done here to simplify the documentation and explaining the structure,
     the JSON files you download will not contain any comments and will be fully valid
-    JSON.\n\nContains full review text data including the user_id that wrote the
-    review and the business_id the review is written for.\n\nThis font has inspired
-    from 'Senorella and the Glass Huarache' and it has created by Jayvee D. Enaguas
-    (Grand Chaos).\r\n\r\nVersion 2 - Added in glyphs for Czech alphabet.\r\n\r\n\xA9
-    2009, 2010, 2011, 2012 GrandChaos9000. Some Rights Reserved.\r\n(Under Licensed
-    by Creative Commons CC-BY-SA 3.0)"
+    JSON.\n\nContains full review text data including the user_id that wrote the review
+    and the business_id the review is written for.\n\nThis font has inspired from
+    'Senorella and the Glass Huarache' and it has created by Jayvee D. Enaguas (Grand
+    Chaos).\r\n\r\nVersion 2 - Added in glyphs for Czech alphabet.\r\n\r\n\xA9 2009,
+    2010, 2011, 2012 GrandChaos9000. Some Rights Reserved.\r\n(Under Licensed by Creative
+    Commons CC-BY-SA 3.0)"
 --- !u!222 &377124785
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1119,18 +1200,10 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 435843523}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1310849685}
-        m_MethodName: SetActive
-        m_Mode: 6
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 1
-        m_CallState: 2
+      m_Calls: [{m_Target: {fileID: 1310849685}, m_MethodName: SetActive, m_Mode: 6,
+          m_Arguments: {m_ObjectArgument: {fileID: 0}, m_ObjectArgumentAssemblyTypeName: 'UnityEngine.Object,
+              UnityEngine', m_IntArgument: 0, m_FloatArgument: 0, m_StringArgument: '',
+            m_BoolArgument: 1}, m_CallState: 2}]
 --- !u!114 &435843523
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2582,7 +2655,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1256857398
 GameObject:
@@ -2757,7 +2830,7 @@ PrefabInstance:
     - target: {fileID: 2085680198053708338, guid: 97463390914dea14a8adfae92dbed23a,
         type: 3}
       propertyPath: m_RootOrder
-      value: 3
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 2085680198053708338, guid: 97463390914dea14a8adfae92dbed23a,
         type: 3}
@@ -3523,7 +3596,7 @@ RectTransform:
   - {fileID: 1621332958}
   - {fileID: 1310849686}
   m_Father: {fileID: 0}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -4295,15 +4368,15 @@ MonoBehaviour:
   m_FillRect: {fileID: 369928715}
   m_HandleRect: {fileID: 1561728866}
   m_Direction: 0
-  m_MinValue: -80
-  m_MaxValue: 0
+  m_MinValue: 0
+  m_MaxValue: 1
   m_WholeNumbers: 0
-  m_Value: 0
+  m_Value: 1
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1548806348}
-        m_MethodName: SetMusic
+      - m_Target: {fileID: 310205657}
+        m_MethodName: SetThemeVolume
         m_Mode: 0
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
