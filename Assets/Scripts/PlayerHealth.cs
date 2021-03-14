@@ -8,6 +8,7 @@ public class PlayerHealth : MonoBehaviour
     public int health;
     private PolygonCollider2D polygonCollider2D;
     public float hitBoxCdTime;
+    private GameManager GM;
     void Start()
     {
         HealthBar.HealthMax = health;
@@ -31,6 +32,7 @@ public class PlayerHealth : MonoBehaviour
         if (health <= 0)
         {
             Destroy(gameObject);
+            GM.CompleteLevel(false);
         }
         polygonCollider2D.enabled = false;
         StartCoroutine(ShowPlayerHitbox());
