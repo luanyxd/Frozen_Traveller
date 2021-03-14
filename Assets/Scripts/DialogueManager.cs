@@ -68,9 +68,10 @@ public class DialogueManager : MonoBehaviour
     void EndDialogue()
     {
         animator.SetBool("IsOpen", false);
-        FindObjectOfType<PipeNPC>().communicating = 3;
-        playercontroller.enableMoving = true;
-        Time.timeScale = 1f;
+        //playercontroller.enableMoving = true;
+        playercontroller_2.enableMoving = true;
+        FindObjectOfType<playercontroller_2>().enabled = true;
+        //Time.timeScale = 1f;
 
         // TODO: display joystick
 

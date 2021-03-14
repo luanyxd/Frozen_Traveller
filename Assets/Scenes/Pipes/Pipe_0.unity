@@ -194,7 +194,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 1542249890}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 0}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 2f3672d52f7250a458db640c32271a06, type: 3}
   m_Name: 
@@ -204,12 +204,6 @@ Animator:
   m_CorrespondingSourceObject: {fileID: 9011396917607919811, guid: 97463390914dea14a8adfae92dbed23a,
     type: 3}
   m_PrefabInstance: {fileID: 6035391720553051107}
-  m_PrefabAsset: {fileID: 0}
---- !u!1 &622863749 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 2436084037757685425, guid: 3d1c12b92761b2c4a93b9226fb0ed579,
-    type: 3}
-  m_PrefabInstance: {fileID: 2436084038346992436}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &738517825
 GameObject:
@@ -347,7 +341,7 @@ PrefabInstance:
     - target: {fileID: 5667174881471141955, guid: 4bfd763bb3d0bea44948ff38bb09cbd4,
         type: 3}
       propertyPath: m_RootOrder
-      value: 12
+      value: 13
       objectReference: {fileID: 0}
     - target: {fileID: 5667174881471141955, guid: 4bfd763bb3d0bea44948ff38bb09cbd4,
         type: 3}
@@ -487,7 +481,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 9
+  m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1194337760 stripped
 GameObject:
@@ -557,7 +551,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 13
+  m_RootOrder: 14
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1250849756 stripped
 GameObject:
@@ -648,7 +642,7 @@ Transform:
   - {fileID: 955410142}
   - {fileID: 1674709109}
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!61 &1509330666
 BoxCollider2D:
@@ -776,7 +770,7 @@ PrefabInstance:
     - target: {fileID: 166396653608544908, guid: e3d01897dca8c764db2f83a2fd40a46f,
         type: 3}
       propertyPath: m_Enabled
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 166396653608544908, guid: e3d01897dca8c764db2f83a2fd40a46f,
         type: 3}
@@ -796,8 +790,14 @@ PrefabInstance:
     - target: {fileID: 1169296289641645607, guid: e3d01897dca8c764db2f83a2fd40a46f,
         type: 3}
       propertyPath: m_Enabled
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 1169296289641645607, guid: e3d01897dca8c764db2f83a2fd40a46f,
+        type: 3}
+      propertyPath: movingAudioSrc
+      value: 
+      objectReference: {fileID: 5899765109569611915, guid: fbe77931a1fd1934d88aac97bf5edf11,
+        type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e3d01897dca8c764db2f83a2fd40a46f, type: 3}
 --- !u!114 &1663376741 stripped
@@ -869,6 +869,112 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 19.2, y: 2.330121}
   m_EdgeRadius: 0
+--- !u!1001 &1854185098
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 450719807828426968, guid: 94f1b348772ca2740a2d15b75a941b3a,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 450719807828426968, guid: 94f1b348772ca2740a2d15b75a941b3a,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 2.82
+      objectReference: {fileID: 0}
+    - target: {fileID: 450719807828426968, guid: 94f1b348772ca2740a2d15b75a941b3a,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -1.51
+      objectReference: {fileID: 0}
+    - target: {fileID: 450719807828426968, guid: 94f1b348772ca2740a2d15b75a941b3a,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 450719807828426968, guid: 94f1b348772ca2740a2d15b75a941b3a,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 450719807828426968, guid: 94f1b348772ca2740a2d15b75a941b3a,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 450719807828426968, guid: 94f1b348772ca2740a2d15b75a941b3a,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 450719807828426968, guid: 94f1b348772ca2740a2d15b75a941b3a,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 450719807828426968, guid: 94f1b348772ca2740a2d15b75a941b3a,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 450719807828426968, guid: 94f1b348772ca2740a2d15b75a941b3a,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 450719807828426968, guid: 94f1b348772ca2740a2d15b75a941b3a,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 450719807828426982, guid: 94f1b348772ca2740a2d15b75a941b3a,
+        type: 3}
+      propertyPath: m_Name
+      value: NPC_monkey
+      objectReference: {fileID: 0}
+    - target: {fileID: 450719807828426983, guid: 94f1b348772ca2740a2d15b75a941b3a,
+        type: 3}
+      propertyPath: dialogue.nameSentences.Array.data[3].isNPC
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 450719807828426983, guid: 94f1b348772ca2740a2d15b75a941b3a,
+        type: 3}
+      propertyPath: dialogue.nameSentences.Array.data[0].sentence
+      value: Hello, Snowman! Can you help me give these apples to my cousins?
+      objectReference: {fileID: 0}
+    - target: {fileID: 450719807828426983, guid: 94f1b348772ca2740a2d15b75a941b3a,
+        type: 3}
+      propertyPath: dialogue.nameSentences.Array.data[1].sentence
+      value: Sure, Mr. Monkey!
+      objectReference: {fileID: 0}
+    - target: {fileID: 450719807828426983, guid: 94f1b348772ca2740a2d15b75a941b3a,
+        type: 3}
+      propertyPath: dialogue.nameSentences.Array.data[2].sentence
+      value: Thank you very much! My cousins moved from a forest destroyed by a severe
+        wildfire. They said that the wildfire was caused by cigarette butts dropped
+        by humans.
+      objectReference: {fileID: 0}
+    - target: {fileID: 450719807828426983, guid: 94f1b348772ca2740a2d15b75a941b3a,
+        type: 3}
+      propertyPath: dialogue.nameSentences.Array.data[3].sentence
+      value: What a sad story!
+      objectReference: {fileID: 0}
+    - target: {fileID: 450719807828426983, guid: 94f1b348772ca2740a2d15b75a941b3a,
+        type: 3}
+      propertyPath: dialogue.nameSentences.Array.data[4].sentence
+      value: Anyway, take care, Snowman!
+      objectReference: {fileID: 0}
+    - target: {fileID: 450719807828426983, guid: 94f1b348772ca2740a2d15b75a941b3a,
+        type: 3}
+      propertyPath: dialogue.nameSentences.Array.data[5].sentence
+      value: I will.
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 94f1b348772ca2740a2d15b75a941b3a, type: 3}
 --- !u!1 &1857017598
 GameObject:
   m_ObjectHideFlags: 0
@@ -897,13 +1003,13 @@ BoxCollider2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1857017598}
-  m_Enabled: 0
+  m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: -0.04868412, y: -0.4868413}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -914,7 +1020,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 4, y: 3.2}
+  m_Size: {x: 1.5657952, y: 2.2263172}
   m_EdgeRadius: 0
 --- !u!95 &1857017600
 Animator:
@@ -993,11 +1099,11 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1857017598}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.12, y: -1.75, z: 0}
+  m_LocalPosition: {x: -1.59, y: -1.89, z: 0}
   m_LocalScale: {x: 0.40127033, y: 0.40127033, z: 0.40127033}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1857017603
 MonoBehaviour:
@@ -1039,8 +1145,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 81744303720bdf5409f5c8b8ba41ea78, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  communicating: 0
-  movingCanvas: {fileID: 622863749}
+  communicating: 1
+  dialogueTrigger: {fileID: 1857017603}
 --- !u!1001 &1885176322
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1397,7 +1503,7 @@ PrefabInstance:
     - target: {fileID: 3972098768392650624, guid: 0aa6769bd22383a4796ca851cdfaf846,
         type: 3}
       propertyPath: m_RootOrder
-      value: 11
+      value: 12
       objectReference: {fileID: 0}
     - target: {fileID: 3972098768392650624, guid: 0aa6769bd22383a4796ca851cdfaf846,
         type: 3}
@@ -1510,6 +1616,11 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4658960397915784257, guid: 0aa6769bd22383a4796ca851cdfaf846,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6064303676436630040, guid: 0aa6769bd22383a4796ca851cdfaf846,
         type: 3}
       propertyPath: m_IsActive
       value: 0
@@ -1640,7 +1751,7 @@ PrefabInstance:
     - target: {fileID: 6858336931395233590, guid: c33ee9ee5f846cb409a9f497eb9b9da9,
         type: 3}
       propertyPath: m_RootOrder
-      value: 2
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 6858336931395233590, guid: c33ee9ee5f846cb409a9f497eb9b9da9,
         type: 3}
@@ -1794,7 +1905,7 @@ PrefabInstance:
     - target: {fileID: 8665204228522864924, guid: d4b014633a82e3d4bbf2b824bfcc2da2,
         type: 3}
       propertyPath: m_RootOrder
-      value: 8
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 8665204228522864924, guid: d4b014633a82e3d4bbf2b824bfcc2da2,
         type: 3}

@@ -251,4 +251,10 @@ public class playercontroller : MonoBehaviour
         ////coinAmount++;
         //coinCollectedDisplayer.IncreaseCoin();
     }
+
+    public void setIdle()
+    {
+        rb2d.velocity = Vector2.zero;
+        enableMoving = false;
+    }
 }

@@ -68,6 +68,8 @@ public class playercontroller_2 : MonoBehaviour
         // SwitchAnimation();
         Attack();
         stepSound();
+
+        //Debug.Log(rb2d.velocity.x);
     }
     void CheckGrounded()
     {
@@ -175,19 +177,22 @@ public class playercontroller_2 : MonoBehaviour
 
     public void stepSound()
     {
-        if(rb2d.velocity.x != 0)
+        if(Mathf.Abs(rb2d.velocity.x) > 0.1f)
             isMoving = true;
         else
             isMoving = false;
         
         if(isMoving && isGround){
-            if (!movingAudioSrc.isPlaying)
-            {
-                movingAudioSrc.Play();
-            }
+            FindObjectOfType<AudioManager>().TurnOn("PlayerStep");
         }
         else{
-            movingAudioSrc.Stop();
+            FindObjectOfType<AudioManager>().TurnOff("PlayerStep");
         }
+    }
+
+    public void setIdle()
+    {
+        rb2d.velocity = Vector2.zero;
+        enableMoving = false;
     }
 }

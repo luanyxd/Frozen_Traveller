@@ -22,6 +22,7 @@ public class Spike : MonoBehaviour
         if (other.CompareTag("Player") && other.GetType().ToString()== "UnityEngine.PolygonCollider2D")
         {
             playerHealth.DamagePlayer(damage);
+            FindObjectOfType<AudioManager>().Play("Hit");
         }
     }
 }

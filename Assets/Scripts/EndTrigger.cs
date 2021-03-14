@@ -6,16 +6,16 @@ public class EndTrigger : MonoBehaviour
 {
     public GameManager gameManager;
     public GameObject hint;
-    public bool missonComplete;
+    public DialogueTrigger dialogueTrigger;
+    public int winConditions;
 
     private void Start()
     {
-        missonComplete = false;
         hint.SetActive(true);
     }
     private void Update()
     {
-        if (missonComplete)
+        if (winConditions == 0)
         {
             hint.SetActive(false);
         }
@@ -23,7 +23,7 @@ public class EndTrigger : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D other)
     {
-        if (missonComplete)
+        if (winConditions <= 0)
         {
             gameManager.CompleteLevel(true);
             GlobalAchieve.ach02Trigger = true;
@@ -35,7 +35,7 @@ public class EndTrigger : MonoBehaviour
 
     private IEnumerator ShowHintCoroutine()
     {
-        FindObjectOfType<DialogueTrigger>().TriggerDialogue();
+        dialogueTrigger.TriggerDialogue();
         yield return new WaitForSeconds(10f);
     }
 }
