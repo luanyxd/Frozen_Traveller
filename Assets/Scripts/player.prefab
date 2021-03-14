@@ -189,6 +189,10 @@ MonoBehaviour:
   doubleJumpSpeed: 6
   isNormal: 0
   canAngry: 0
+  angryDuration: 0
+  timeDisplayer: {fileID: 0}
+  countdownClock: {fileID: 0}
+  clockAnim: {fileID: 0}
   maxHealth: 100
   currentHealth: 0
   healthBar: {fileID: 0}
@@ -283,7 +287,8 @@ PolygonCollider2D:
       - {x: -0.53, y: -0.7}
       - {x: -0.45, y: -0.78999996}
       - {x: -0.24, y: -0.9}
-      - {x: -0.14999999, y: -0.90999997}
+      - {x: -0.17475466, y: -0.999233}
+      - {x: 0.09040135, y: -0.99842197}
       - {x: 0.14, y: -0.90999997}
       - {x: 0.28, y: -0.85999995}
       - {x: 0.38, y: -0.79999995}

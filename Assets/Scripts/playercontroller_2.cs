@@ -46,10 +46,6 @@ public class playercontroller_2 : MonoBehaviour
     private Vector2 move;
     public Snowballhit snowballhit;
 
-    public AudioSource movingAudioSrc;
-
-
-
     // Start is called before the first frame update
     void Start()
     {
@@ -72,7 +68,7 @@ public class playercontroller_2 : MonoBehaviour
         CheckGrounded();
         // SwitchAnimation();
         Attack();
-        //stepSound();
+        stepSound();
 
         //Debug.Log(rb2d.velocity.x);
     }
@@ -215,7 +211,9 @@ public class playercontroller_2 : MonoBehaviour
         else
             isMoving = false;
         
+        //Debug.Log(isMoving+"Moving! Playing sound.");
         if(isMoving && isGround){
+            //Debug.Log("Moving! Playing sound.");
             FindObjectOfType<AudioManager>().TurnOn("PlayerStep");
         }
         else{
