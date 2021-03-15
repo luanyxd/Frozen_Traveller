@@ -44,6 +44,9 @@ TagManager:
   - name: Sky
     uniqueID: 522607291
     locked: 0
+  - name: Between sky and background
+    uniqueID: 2955174561
+    locked: 0
   - name: Background 1
     uniqueID: 323821685
     locked: 0
