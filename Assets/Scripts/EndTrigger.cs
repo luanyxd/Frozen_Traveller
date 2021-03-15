@@ -26,7 +26,7 @@ public class EndTrigger : MonoBehaviour
         if (winConditions <= 0)
         {
             gameManager.CompleteLevel(true);
-            GlobalAchieve.ach02Trigger = true;
+            FindObjectOfType<GlobalAchieve>().TriggerAchievementById("level1_complete");
         } else
         {
             StartCoroutine(ShowHintCoroutine());

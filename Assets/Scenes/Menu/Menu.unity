@@ -1917,6 +1917,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1256857399}
     m_Modifications:
+    - target: {fileID: 7204299380190172704, guid: 10dd5bb56ccb31343abd9962d21c14ca,
+        type: 3}
+      propertyPath: awardTag
+      value: level1_coin
+      objectReference: {fileID: 0}
     - target: {fileID: 7204299380190172705, guid: 10dd5bb56ccb31343abd9962d21c14ca,
         type: 3}
       propertyPath: m_Pivot.x
@@ -5639,6 +5644,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1256857399}
     m_Modifications:
+    - target: {fileID: 7204299380190172704, guid: 10dd5bb56ccb31343abd9962d21c14ca,
+        type: 3}
+      propertyPath: awardTag
+      value: level1_complete
+      objectReference: {fileID: 0}
     - target: {fileID: 7204299380190172705, guid: 10dd5bb56ccb31343abd9962d21c14ca,
         type: 3}
       propertyPath: m_Pivot.x
@@ -5749,5 +5759,16 @@ PrefabInstance:
       propertyPath: m_Name
       value: Achievement
       objectReference: {fileID: 0}
+    - target: {fileID: 7204299380514762579, guid: 10dd5bb56ccb31343abd9962d21c14ca,
+        type: 3}
+      propertyPath: m_text
+      value: Complete level 1.
+      objectReference: {fileID: 0}
+    - target: {fileID: 7204299381165671566, guid: 10dd5bb56ccb31343abd9962d21c14ca,
+        type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: c3878b09680bca74686a39d986b6bfd9,
+        type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 10dd5bb56ccb31343abd9962d21c14ca, type: 3}

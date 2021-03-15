@@ -57,14 +57,14 @@ MonoBehaviour:
   - id: level1_complete
     title: LEVEL1 Completed!
     description: You finished the first level.
-    achImage: {fileID: 21300000, guid: 526fde442aafe1049aeec21200f9cf5c, type: 3}
+    achImage: {fileID: 21300000, guid: c3878b09680bca74686a39d986b6bfd9, type: 3}
     active: 0
     code: 0
   collectionAchievements:
   - id: level1_coin
     title: Coin Collector
     description: Apparently, you know how to collect coins.
-    achImage: {fileID: 21300000, guid: 284079032d268d34580769cdb3cc9606, type: 3}
+    achImage: {fileID: 21300000, guid: eb907673e1336ea4b8db83de17c3442a, type: 3}
     active: 0
     code: 0
     counter: 0
@@ -81,15 +81,65 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 5
       objectReference: {fileID: 0}
+    - target: {fileID: 6206984956597008880, guid: ebff133d1cd36f34195b89b4b797b833,
+        type: 3}
+      propertyPath: m_FontData.m_FontSize
+      value: 22
+      objectReference: {fileID: 0}
     - target: {fileID: 6456868255663987207, guid: ebff133d1cd36f34195b89b4b797b833,
         type: 3}
       propertyPath: m_Layer
       value: 5
       objectReference: {fileID: 0}
+    - target: {fileID: 6573999754453155167, guid: ebff133d1cd36f34195b89b4b797b833,
+        type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 205.12048
+      objectReference: {fileID: 0}
+    - target: {fileID: 6573999754453155167, guid: ebff133d1cd36f34195b89b4b797b833,
+        type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 61.987366
+      objectReference: {fileID: 0}
+    - target: {fileID: 6573999754453155167, guid: ebff133d1cd36f34195b89b4b797b833,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 52.685
+      objectReference: {fileID: 0}
+    - target: {fileID: 6573999754453155167, guid: ebff133d1cd36f34195b89b4b797b833,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 14
+      objectReference: {fileID: 0}
+    - target: {fileID: 7589213309584170600, guid: ebff133d1cd36f34195b89b4b797b833,
+        type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 195.64319
+      objectReference: {fileID: 0}
+    - target: {fileID: 7589213309584170600, guid: ebff133d1cd36f34195b89b4b797b833,
+        type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 63.249313
+      objectReference: {fileID: 0}
+    - target: {fileID: 7589213309584170600, guid: ebff133d1cd36f34195b89b4b797b833,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 47.9
+      objectReference: {fileID: 0}
+    - target: {fileID: 7589213309584170600, guid: ebff133d1cd36f34195b89b4b797b833,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -24.759
+      objectReference: {fileID: 0}
     - target: {fileID: 8419620113846572582, guid: ebff133d1cd36f34195b89b4b797b833,
         type: 3}
       propertyPath: m_Name
       value: Canvas-AchievementsPopUp
+      objectReference: {fileID: 0}
+    - target: {fileID: 8419620113846572582, guid: ebff133d1cd36f34195b89b4b797b833,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8467740992746141218, guid: ebff133d1cd36f34195b89b4b797b833,
         type: 3}

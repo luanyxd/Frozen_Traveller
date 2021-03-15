@@ -80,6 +80,7 @@ public class GlobalAchieve : MonoBehaviour
             a.code = PlayerPrefs.GetInt(a.id);
             if(a.code != 1 && a.active == true)
             {
+                Debug.Log("Achievement active:"+a.id);
                 StartCoroutine(TriggerAchievement(a));
             }
         }
@@ -88,6 +89,7 @@ public class GlobalAchieve : MonoBehaviour
             a.code = PlayerPrefs.GetInt(a.id);
             if(a.code != 1 && a.counter >= a.goal)
             {
+                Debug.Log("Achievement active:"+a.id);
                 StartCoroutine(TriggerAchievement(a));
             }
         }
@@ -109,10 +111,17 @@ public class GlobalAchieve : MonoBehaviour
         a.counter += 1;
     }
 
+    public void TriggerAchievementById(string id)
+    {
+        Achievement a = findAchievementById(id);
+        a.active = true;
+    }
+
     IEnumerator TriggerAchievement(Achievement ach)
     {
         achActive = true;
         ach.code = 1;
+        PlayerPrefs.SetInt(ach.id, 1);
         //achSound.Play();
         achImage.SetActive(true);
         achTitle.GetComponent<Text>().text = ach.title;
