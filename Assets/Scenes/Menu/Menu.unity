@@ -562,137 +562,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 238541492}
   m_CullTransparentMesh: 0
---- !u!1001 &254628068
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 1256857399}
-    m_Modifications:
-    - target: {fileID: 7204299380190172705, guid: 10dd5bb56ccb31343abd9962d21c14ca,
-        type: 3}
-      propertyPath: m_Pivot.x
-      value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 7204299380190172705, guid: 10dd5bb56ccb31343abd9962d21c14ca,
-        type: 3}
-      propertyPath: m_Pivot.y
-      value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 7204299380190172705, guid: 10dd5bb56ccb31343abd9962d21c14ca,
-        type: 3}
-      propertyPath: m_RootOrder
-      value: 4
-      objectReference: {fileID: 0}
-    - target: {fileID: 7204299380190172705, guid: 10dd5bb56ccb31343abd9962d21c14ca,
-        type: 3}
-      propertyPath: m_AnchorMax.x
-      value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 7204299380190172705, guid: 10dd5bb56ccb31343abd9962d21c14ca,
-        type: 3}
-      propertyPath: m_AnchorMax.y
-      value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 7204299380190172705, guid: 10dd5bb56ccb31343abd9962d21c14ca,
-        type: 3}
-      propertyPath: m_AnchorMin.x
-      value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 7204299380190172705, guid: 10dd5bb56ccb31343abd9962d21c14ca,
-        type: 3}
-      propertyPath: m_AnchorMin.y
-      value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 7204299380190172705, guid: 10dd5bb56ccb31343abd9962d21c14ca,
-        type: 3}
-      propertyPath: m_SizeDelta.x
-      value: 100
-      objectReference: {fileID: 0}
-    - target: {fileID: 7204299380190172705, guid: 10dd5bb56ccb31343abd9962d21c14ca,
-        type: 3}
-      propertyPath: m_SizeDelta.y
-      value: 31.674881
-      objectReference: {fileID: 0}
-    - target: {fileID: 7204299380190172705, guid: 10dd5bb56ccb31343abd9962d21c14ca,
-        type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7204299380190172705, guid: 10dd5bb56ccb31343abd9962d21c14ca,
-        type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7204299380190172705, guid: 10dd5bb56ccb31343abd9962d21c14ca,
-        type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7204299380190172705, guid: 10dd5bb56ccb31343abd9962d21c14ca,
-        type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7204299380190172705, guid: 10dd5bb56ccb31343abd9962d21c14ca,
-        type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7204299380190172705, guid: 10dd5bb56ccb31343abd9962d21c14ca,
-        type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7204299380190172705, guid: 10dd5bb56ccb31343abd9962d21c14ca,
-        type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7204299380190172705, guid: 10dd5bb56ccb31343abd9962d21c14ca,
-        type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7204299380190172705, guid: 10dd5bb56ccb31343abd9962d21c14ca,
-        type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: -4.8
-      objectReference: {fileID: 0}
-    - target: {fileID: 7204299380190172705, guid: 10dd5bb56ccb31343abd9962d21c14ca,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7204299380190172705, guid: 10dd5bb56ccb31343abd9962d21c14ca,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7204299380190172705, guid: 10dd5bb56ccb31343abd9962d21c14ca,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7204299380190172706, guid: 10dd5bb56ccb31343abd9962d21c14ca,
-        type: 3}
-      propertyPath: m_Name
-      value: Achievement (3)
-      objectReference: {fileID: 0}
-    - target: {fileID: 7204299380371123243, guid: 10dd5bb56ccb31343abd9962d21c14ca,
-        type: 3}
-      propertyPath: m_Sprite
-      value: 
-      objectReference: {fileID: 21300000, guid: 54b98311fa8a6c045bfc9b1f9cc65eed,
-        type: 3}
-    m_RemovedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 10dd5bb56ccb31343abd9962d21c14ca, type: 3}
---- !u!224 &254628069 stripped
-RectTransform:
-  m_CorrespondingSourceObject: {fileID: 7204299380190172705, guid: 10dd5bb56ccb31343abd9962d21c14ca,
-    type: 3}
-  m_PrefabInstance: {fileID: 254628068}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &257950688
 GameObject:
   m_ObjectHideFlags: 0
@@ -1387,6 +1256,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1256857399}
     m_Modifications:
+    - target: {fileID: 7204299380190172704, guid: 10dd5bb56ccb31343abd9962d21c14ca,
+        type: 3}
+      propertyPath: awardTag
+      value: level1_chest
+      objectReference: {fileID: 0}
     - target: {fileID: 7204299380190172705, guid: 10dd5bb56ccb31343abd9962d21c14ca,
         type: 3}
       propertyPath: m_Pivot.x
@@ -1495,13 +1369,24 @@ PrefabInstance:
     - target: {fileID: 7204299380190172706, guid: 10dd5bb56ccb31343abd9962d21c14ca,
         type: 3}
       propertyPath: m_Name
-      value: Achievement (2)
+      value: Achievement_level1_chest
       objectReference: {fileID: 0}
     - target: {fileID: 7204299380371123243, guid: 10dd5bb56ccb31343abd9962d21c14ca,
         type: 3}
       propertyPath: m_Sprite
       value: 
       objectReference: {fileID: 21300000, guid: 54b98311fa8a6c045bfc9b1f9cc65eed,
+        type: 3}
+    - target: {fileID: 7204299380514762579, guid: 10dd5bb56ccb31343abd9962d21c14ca,
+        type: 3}
+      propertyPath: m_text
+      value: You found the chest in level1.
+      objectReference: {fileID: 0}
+    - target: {fileID: 7204299381165671566, guid: 10dd5bb56ccb31343abd9962d21c14ca,
+        type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 871c68e03f708a149a41d28b6d79bd04,
         type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 10dd5bb56ccb31343abd9962d21c14ca, type: 3}
@@ -1786,6 +1671,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1256857399}
     m_Modifications:
+    - target: {fileID: 7204299380190172704, guid: 10dd5bb56ccb31343abd9962d21c14ca,
+        type: 3}
+      propertyPath: awardTag
+      value: level1_diamond
+      objectReference: {fileID: 0}
     - target: {fileID: 7204299380190172705, guid: 10dd5bb56ccb31343abd9962d21c14ca,
         type: 3}
       propertyPath: m_Pivot.x
@@ -1799,7 +1689,7 @@ PrefabInstance:
     - target: {fileID: 7204299380190172705, guid: 10dd5bb56ccb31343abd9962d21c14ca,
         type: 3}
       propertyPath: m_RootOrder
-      value: 5
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 7204299380190172705, guid: 10dd5bb56ccb31343abd9962d21c14ca,
         type: 3}
@@ -1894,13 +1784,24 @@ PrefabInstance:
     - target: {fileID: 7204299380190172706, guid: 10dd5bb56ccb31343abd9962d21c14ca,
         type: 3}
       propertyPath: m_Name
-      value: Achievement (4)
+      value: Achievement_level1_diamond
       objectReference: {fileID: 0}
     - target: {fileID: 7204299380371123243, guid: 10dd5bb56ccb31343abd9962d21c14ca,
         type: 3}
       propertyPath: m_Sprite
       value: 
       objectReference: {fileID: 21300000, guid: f3eec70262241d645b66f6305f47f2b7,
+        type: 3}
+    - target: {fileID: 7204299380514762579, guid: 10dd5bb56ccb31343abd9962d21c14ca,
+        type: 3}
+      propertyPath: m_text
+      value: You found the diamond in level1.
+      objectReference: {fileID: 0}
+    - target: {fileID: 7204299381165671566, guid: 10dd5bb56ccb31343abd9962d21c14ca,
+        type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 6d22f6eea12364a4ba3b58ea2ddde8c9,
         type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 10dd5bb56ccb31343abd9962d21c14ca, type: 3}
@@ -2030,7 +1931,7 @@ PrefabInstance:
     - target: {fileID: 7204299380190172706, guid: 10dd5bb56ccb31343abd9962d21c14ca,
         type: 3}
       propertyPath: m_Name
-      value: Achievement (1)
+      value: Achievement_level1_coin
       objectReference: {fileID: 0}
     - target: {fileID: 7204299380371123243, guid: 10dd5bb56ccb31343abd9962d21c14ca,
         type: 3}
@@ -3225,7 +3126,6 @@ RectTransform:
   - {fileID: 1539792626}
   - {fileID: 589716882}
   - {fileID: 474661531}
-  - {fileID: 254628069}
   - {fileID: 565856325}
   m_Father: {fileID: 502612372}
   m_RootOrder: 0
@@ -5757,7 +5657,7 @@ PrefabInstance:
     - target: {fileID: 7204299380190172706, guid: 10dd5bb56ccb31343abd9962d21c14ca,
         type: 3}
       propertyPath: m_Name
-      value: Achievement
+      value: Achievement_level1_complete
       objectReference: {fileID: 0}
     - target: {fileID: 7204299380514762579, guid: 10dd5bb56ccb31343abd9962d21c14ca,
         type: 3}

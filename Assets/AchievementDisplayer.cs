@@ -19,6 +19,9 @@ public class AchievementDisplayer : MonoBehaviour
             awardName.SetActive(true);
             questionImage.SetActive(false);
             questionMarkList.SetActive(false);
+            Debug.Log("Questionmark should be disabled:"+awardTag);
+            Debug.Log(questionImage.activeSelf);
+            Debug.Log(questionMarkList.activeSelf);
         } else {
             awardImage.SetActive(false);
             awardName.SetActive(false);
