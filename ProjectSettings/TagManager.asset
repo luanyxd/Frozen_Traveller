@@ -44,7 +44,10 @@ TagManager:
   - name: Sky
     uniqueID: 522607291
     locked: 0
-  - name: Background
+  - name: Background 1
+    uniqueID: 323821685
+    locked: 0
+  - name: Background2
     uniqueID: 3555341239
     locked: 0
   - name: Grass
