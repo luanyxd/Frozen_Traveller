@@ -187,9 +187,9 @@ MonoBehaviour:
   speed: 6
   jumpSpeed: 8
   doubleJumpSpeed: 6
-  isNormal: 0
-  canAngry: 0
-  angryDuration: 0
+  isNormal: 1
+  canAngry: 1
+  angryDuration: 10
   timeDisplayer: {fileID: 0}
   countdownClock: {fileID: 0}
   clockAnim: {fileID: 0}
@@ -198,7 +198,6 @@ MonoBehaviour:
   healthBar: {fileID: 0}
   coinCollectedDisplayer: {fileID: 0}
   snowballhit: {fileID: 460481037486338064}
-  movingAudioSrc: {fileID: 0}
 --- !u!114 &166396653608544908
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -215,9 +214,9 @@ MonoBehaviour:
   jumpSpeed: 8
   doubleJumpSpeed: 6
   joystick: {fileID: 0}
-  isNormal: 0
-  canAngry: 0
-  angryDuration: 0
+  isNormal: 1
+  canAngry: 1
+  angryDuration: 10
   timeDisplayer: {fileID: 0}
   countdownClock: {fileID: 0}
   clockAnim: {fileID: 0}

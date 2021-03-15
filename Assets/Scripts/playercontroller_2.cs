@@ -69,6 +69,7 @@ public class playercontroller_2 : MonoBehaviour
         // SwitchAnimation();
         Attack();
         stepSound();
+        StartCoroutine(BecomeAngryCoroutine());
 
         //Debug.Log(rb2d.velocity.x);
     }
