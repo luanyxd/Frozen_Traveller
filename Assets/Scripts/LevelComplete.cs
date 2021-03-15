@@ -6,7 +6,8 @@ using TMPro;
 public class LevelComplete : MonoBehaviour
 {
     public LevelChanger levelChanger;
-    public TMP_Text levelMessage;
+    public GameObject winText;
+    public GameObject loseText;
     public TMP_Text timeAmount;
     public TMP_Text coinAmount;
     public TMP_Text historyHighest;
@@ -35,13 +36,15 @@ public class LevelComplete : MonoBehaviour
         if (winGame)
         {
             win = true;
-            levelMessage.text = "YOU WIN";
+            winText.SetActive(true);
+            loseText.SetActive(false);
             retryButton.SetActive(false);
             nextButton.SetActive(true);
         } else
         {
             win = false;
-            levelMessage.text = "YOU LOSE";
+            winText.SetActive(false);
+            loseText.SetActive(true);
             retryButton.SetActive(true);
             nextButton.SetActive(false);
         }
