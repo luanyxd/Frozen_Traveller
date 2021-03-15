@@ -10,7 +10,7 @@ public class Crab : MonoBehaviour
     public bool hurt;
     private PlayerHealth playerHealth;
     public Transform leftpoint, rightpoint;
-    private bool Faceleft =false;
+    private bool Faceleft = false;
     public float speed;
     public int health;
     // Start is called before the first frame update
@@ -28,7 +28,7 @@ public class Crab : MonoBehaviour
     }
     void OnCollisionEnter2D(Collision2D other)
     {
-        
+
         if (other.gameObject.CompareTag("Player"))
         {
             playerHealth.DamagePlayer(damage);
@@ -39,22 +39,36 @@ public class Crab : MonoBehaviour
     {
         if (other.gameObject.name == "snowball(Clone)")
         {
+            if(other.gameObject.transform.position.x < transform.position.x)
+            {
+                transform.localScale = new Vector3(-0.5f, 0.5f, 1);
+            }
+            else
+            {
+                transform.localScale = new Vector3(0.5f, 0.5f, 1);
+            }
             Destroy(other.gameObject);
             health -= 1;
-            changeState();
-            Invoke("changeState", 0.4f);
+            if (health == 0)
+            {
+                animator.SetBool("die", true);
+                Invoke("MyDestroy", 0.4f);
+            }
+            else
+            {
+
+                changeState();
+                Invoke("changeState", 0.4f);
+            }
         }
-        if (health == 0)
-        {
-            Destroy(gameObject);
-        }
+
     }
     void changeState()
     {
         hurt = !hurt;
         animator.SetBool("hurt", hurt);
     }
-    
+
     void Movement()
     {
         if (hurt)
@@ -63,7 +77,7 @@ public class Crab : MonoBehaviour
         }
         else if (Faceleft)
         {
-          
+
             rb.velocity = new Vector2(-speed, rb.velocity.y);
             if (transform.position.x < leftpoint.position.x)
             {
@@ -80,5 +94,9 @@ public class Crab : MonoBehaviour
                 Faceleft = true;
             }
         }
+    }
+    void MyDestroy()
+    {
+        Destroy(gameObject);
     }
 }

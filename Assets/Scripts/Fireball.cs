@@ -33,7 +33,8 @@ public class Fireball : MonoBehaviour
             playerHealth.DamagePlayer(damage);
         }
         animator.SetBool("explode", true);
-        Invoke("MyDestroy", 0.9f);
+        rb.velocity = new Vector2(0, 0);
+        Invoke("MyDestroy", 0.6f);
     }
     void MyDestroy()
     {
