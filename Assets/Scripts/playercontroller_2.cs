@@ -45,6 +45,7 @@ public class playercontroller_2 : MonoBehaviour
 
     private Vector2 move;
     public Snowballhit snowballhit;
+    //public Snowballhit_angry snowballhit_angry;
 
     // Start is called before the first frame update
     void Start()
@@ -146,12 +147,20 @@ public class playercontroller_2 : MonoBehaviour
     }
     public void Attack()
     {
-         if (Input.GetButtonDown("Attack"))
+         if (Input.GetButtonDown("Attack") && isNormal)
         {
             anim.SetBool("idle", true);
             anim.SetTrigger("Attack");
             snowballhit.Shoot();
         }
+         else if (Input.GetButtonDown("Attack"))
+         {
+             Debug.Log("angry-Now");
+             anim.SetBool("idle", true);
+             anim.SetTrigger("Attack");
+             snowballhit.Shoot1();
+             //snowballhit_angry.Shoot_angry();
+         }
         // anim.SetBool("idle", true);
     }
     /*

@@ -35,7 +35,7 @@ public class Clock : MonoBehaviour
     {
         if (timeActive)
         {
-            Debug.Log(clock);
+            //Debug.Log(clock);
             clock -= Time.deltaTime;
             if (Mathf.Ceil(clock % 60) == 60)
             {

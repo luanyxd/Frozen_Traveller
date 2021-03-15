@@ -145,4 +145,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 15
   demage: 2
-  destroyDistance: 50
+  destroyDistance: 30

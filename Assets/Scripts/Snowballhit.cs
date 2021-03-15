@@ -5,6 +5,8 @@ using UnityEngine;
 public class Snowballhit : MonoBehaviour
 {
     public GameObject snowballPrefab;
+    public GameObject snowballPrefab1;
+    public GameObject snowballPrefab2;
 
     //private PlayerInputaction controls;
 
@@ -42,5 +44,15 @@ public class Snowballhit : MonoBehaviour
         snowballPrefab.SetActive(true);
         Instantiate(snowballPrefab, transform.position, transform.rotation);
     }
+    public void Shoot1()
+    {
+        snowballPrefab.SetActive(true);
+        Instantiate(snowballPrefab, transform.position, transform.rotation);
+        snowballPrefab1.SetActive(true);
+        Instantiate(snowballPrefab1, transform.position, transform.rotation);
+        snowballPrefab2.SetActive(true);
+        Instantiate(snowballPrefab2, transform.position, transform.rotation);
+    }
+
 
 }
