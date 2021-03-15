@@ -14,6 +14,7 @@ public class PlayerHealth : MonoBehaviour
         HealthBar.HealthMax = health;
         HealthBar.HealthCurrent = health;
         polygonCollider2D= GetComponent<PolygonCollider2D>();
+        GM = FindObjectOfType<GameManager>();
     }
 
     // Update is called once per frame
@@ -31,11 +32,17 @@ public class PlayerHealth : MonoBehaviour
         HealthBar.HealthCurrent = health;
         if (health <= 0)
         {
-            Destroy(gameObject);
+            StartCoroutine(WaitToDie());
             GM.CompleteLevel(false);
+            Destroy(gameObject);
         }
         polygonCollider2D.enabled = false;
         StartCoroutine(ShowPlayerHitbox());
+    }
+
+    IEnumerator WaitToDie()
+    {
+        yield return new WaitForSeconds(0.5f);
     }
 
     IEnumerator ShowPlayerHitbox()
