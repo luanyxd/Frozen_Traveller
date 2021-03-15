@@ -227,7 +227,9 @@ public class playercontroller_2 : MonoBehaviour
             FindObjectOfType<AudioManager>().TurnOn("PlayerStep");
         }
         else{
+            //Debug.Log("NotMoving! Turning off the sound.");
             FindObjectOfType<AudioManager>().TurnOff("PlayerStep");
+            //Debug.Log("The sound is playing:"+FindObjectOfType<AudioManager>().FindSound("PlayerStep").source.isPlaying);
         }
     }
 
