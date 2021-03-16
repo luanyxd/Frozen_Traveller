@@ -238,4 +238,11 @@ public class playercontroller_2 : MonoBehaviour
         rb2d.velocity = Vector2.zero;
         enableMoving = false;
     }
+
+    public void setDie()
+    {
+        Debug.Log("die!");
+        enableMoving = false;
+        anim.SetTrigger("Die");
+    }
 }
