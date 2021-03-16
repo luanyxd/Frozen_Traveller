@@ -24,10 +24,10 @@ public class Fireball : MonoBehaviour
         }
     }
 
-
+ 
     void OnCollisionEnter2D(Collision2D other)
     {
-        if (other.gameObject.CompareTag("Player") && other.GetType().ToString() == "UnityEngine.CapsuleCollider2D")
+        if (other.gameObject.CompareTag("Player"))
         {
             rb.isKinematic = true;
             playerHealth.DamagePlayer(damage);
