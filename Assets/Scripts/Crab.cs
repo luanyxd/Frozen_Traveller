@@ -79,6 +79,7 @@ public class Crab : MonoBehaviour
         {
 
             rb.velocity = new Vector2(-speed, rb.velocity.y);
+            transform.localScale = new Vector3(-0.5f, 0.5f, 1);
             if (transform.position.x < leftpoint.position.x)
             {
                 transform.localScale = new Vector3(0.5f, 0.5f, 1);
@@ -88,6 +89,7 @@ public class Crab : MonoBehaviour
         else
         {
             rb.velocity = new Vector2(speed, rb.velocity.y);
+            transform.localScale = new Vector3(0.5f, 0.5f, 1);
             if (transform.position.x > rightpoint.position.x)
             {
                 transform.localScale = new Vector3(-0.5f, 0.5f, 1);

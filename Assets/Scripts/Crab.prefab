@@ -151,7 +151,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rb: {fileID: 7400132268333210186}
-  animator: {fileID: 0}
+  animator: {fileID: 7400132268333210188}
   damage: 1
   hurt: 0
   leftpoint: {fileID: 7400132268476854738}
