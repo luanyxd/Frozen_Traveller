@@ -24,8 +24,8 @@ public class Rock : MonoBehaviour
         if (other.gameObject.CompareTag("Player") && other.GetType().ToString() == "UnityEngine.CapsuleCollider2D")
         {
             rb.isKinematic = false;
-            rb.gravityScale = 10;
-            rb.velocity = new Vector2(-10, 0);
+            rb.gravityScale = 20;
+            rb.velocity = new Vector2(-20, 0);
           
         }
     }
