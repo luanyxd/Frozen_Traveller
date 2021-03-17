@@ -9,9 +9,12 @@ public class EndTrigger : MonoBehaviour
     public DialogueTrigger dialogueTrigger;
     public int winConditions;
 
+    private bool isCommunicating;
+
     private void Start()
     {
         hint.SetActive(true);
+        isCommunicating = false;
     }
     private void Update()
     {
@@ -27,8 +30,9 @@ public class EndTrigger : MonoBehaviour
         {
             gameManager.CompleteLevel(true);
             FindObjectOfType<GlobalAchieve>().TriggerAchievementById("level1_complete");
-        } else
+        } else if (!isCommunicating)
         {
+            isCommunicating = true;
             StartCoroutine(ShowHintCoroutine());
         }
     }
@@ -37,5 +41,7 @@ public class EndTrigger : MonoBehaviour
     {
         dialogueTrigger.TriggerDialogue();
         yield return new WaitForSeconds(10f);
+        isCommunicating = false;
+
     }
 }
