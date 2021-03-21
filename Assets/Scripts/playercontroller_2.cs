@@ -76,7 +76,7 @@ public class playercontroller_2 : MonoBehaviour
     }
     void CheckGrounded()
     {
-        isGround = myFeet.IsTouchingLayers(LayerMask.GetMask("Ground")) || myFeet.IsTouchingLayers(LayerMask.GetMask("Movingplatform"));
+        isGround = myFeet.IsTouchingLayers(LayerMask.GetMask("Ground")) || myFeet.IsTouchingLayers(LayerMask.GetMask("Movingplatform")) || myFeet.IsTouchingLayers(LayerMask.GetMask("DestructibleLayer"));
         // Debug.Log(isGround);
     }
     void Run()
