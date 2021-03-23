@@ -16,4 +16,13 @@ public class MainMenu : MonoBehaviour
         Debug.Log("Quit Game!");
         Application.Quit();
     }
+
+    public void Continue()
+    {
+        PlayerData data = SaveSystem.LoadPlayer();
+        if (data != null)
+        {
+            FindObjectOfType<LevelChanger>().LoadSpecificLevel(data.level);
+        }
+    }
 }

@@ -7,24 +7,23 @@ public class CoinCollectedDisplayer : MonoBehaviour
 {
     public TMP_Text amountText;
     public int startamount;
-    public static int currentamount;
+    public int currentamount;
 
     // Start is called before the first frame update
     void Start()
     {
         startamount = 0;
-        //Debug.Log(currentamount);
         currentamount = startamount;
-        //amountText.text = amount.ToString();
+        amountText.text = currentamount.ToString();
     }
     void Update()
     {
-        //Debug.Log(currentamount);
         amountText.text = currentamount.ToString();
     }
-    /*public void IncreaseCoin()
+
+    public void IncreaseCoin()
     {
-        amount++;
-        amountText.text = amount.ToString();
-    }*/
+        currentamount++;
+        amountText.text = currentamount.ToString();
+    }
 }

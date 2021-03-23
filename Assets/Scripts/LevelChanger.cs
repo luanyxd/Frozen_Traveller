@@ -35,6 +35,11 @@ public class LevelChanger : MonoBehaviour
         StartCoroutine(LoadLevel(0));
     }
 
+    public void LoadSpecificLevel(int levelIndex)
+    {
+        StartCoroutine(LoadLevel(levelIndex));
+    }
+
     // with Coroutine
 
     IEnumerator LoadLevel(int levelIndex)

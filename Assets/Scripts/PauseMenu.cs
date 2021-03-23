@@ -1,6 +1,5 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PauseMenu : MonoBehaviour
 {
@@ -27,5 +26,6 @@ public class PauseMenu : MonoBehaviour
         // back to main menu, may consider other settings
         Time.timeScale = 1f;
         FindObjectOfType<LevelChanger>().LoadMainMenu();
+        SaveSystem.SavePlayer(FindObjectOfType<playercontroller_2>(), SceneManager.GetActiveScene().buildIndex);
     }
 }

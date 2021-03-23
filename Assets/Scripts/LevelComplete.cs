@@ -1,6 +1,5 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
+using UnityEngine.SceneManagement;
 using TMPro;
 
 public class LevelComplete : MonoBehaviour
@@ -40,6 +39,8 @@ public class LevelComplete : MonoBehaviour
             loseText.SetActive(false);
             retryButton.SetActive(false);
             nextButton.SetActive(true);
+
+            SaveSystem.SavePlayer(FindObjectOfType<playercontroller_2>(), SceneManager.GetActiveScene().buildIndex + 1);
         } else
         {
             win = false;
@@ -47,6 +48,8 @@ public class LevelComplete : MonoBehaviour
             loseText.SetActive(true);
             retryButton.SetActive(true);
             nextButton.SetActive(false);
+
+            SaveSystem.SavePlayer(FindObjectOfType<playercontroller_2>(), SceneManager.GetActiveScene().buildIndex);
         }
     }
 
