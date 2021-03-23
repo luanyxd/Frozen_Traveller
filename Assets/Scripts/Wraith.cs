@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Crab : MonoBehaviour
+public class Wraith : MonoBehaviour
 {
     public Rigidbody2D rb;
     public Animator animator;
@@ -10,8 +10,8 @@ public class Crab : MonoBehaviour
     public bool hurt;
     public bool attack;
     private PlayerHealth playerHealth;
-    public Transform leftpoint, rightpoint;
-    private bool Faceleft = false;
+    public Transform toppoint, downpoint;
+    private bool goingUp = false;
     public float speed;
     public int health;
     // Start is called before the first frame update
@@ -35,15 +35,15 @@ public class Crab : MonoBehaviour
             playerHealth.DamagePlayer(damage);
             if (other.gameObject.transform.position.x < transform.position.x)
             {
-                transform.localScale = new Vector3(-0.5f, 0.5f, 1);
+                transform.localScale = new Vector3(-0.75f, 0.75f, 1);
             }
             else
             {
-                transform.localScale = new Vector3(0.5f, 0.5f, 1);
+                transform.localScale = new Vector3(0.75f, 0.75f, 1);
             }
             attackState();
             Invoke("attackState", 0.4f);
-            
+
         }
     }
 
@@ -51,13 +51,13 @@ public class Crab : MonoBehaviour
     {
         if (other.gameObject.name == "snowball(Clone)")
         {
-            if(other.gameObject.transform.position.x < transform.position.x)
+            if (other.gameObject.transform.position.x < transform.position.x)
             {
-                transform.localScale = new Vector3(-0.5f, 0.5f, 1);
+                transform.localScale = new Vector3(-0.75f, 0.75f, 1);
             }
             else
             {
-                transform.localScale = new Vector3(0.5f, 0.5f, 1);
+                transform.localScale = new Vector3(0.75f, 0.75f, 1);
             }
             Destroy(other.gameObject);
             health -= 1;
@@ -88,29 +88,26 @@ public class Crab : MonoBehaviour
 
     void Movement()
     {
-        if (hurt||attack)
+        if (hurt || attack)
         {
             rb.velocity = new Vector2(0, rb.velocity.y);
         }
-        else if (Faceleft)
+        else if (goingUp)
         {
-
-            rb.velocity = new Vector2(-speed, rb.velocity.y);
-            transform.localScale = new Vector3(-0.5f, 0.5f, 1);
-            if (transform.position.x < leftpoint.position.x)
+            rb.velocity = new Vector2(rb.velocity.x, speed);
+            transform.localScale = new Vector3(-0.75f, 0.75f, 1);
+            if (transform.position.y > toppoint.position.y)
             {
-                transform.localScale = new Vector3(0.5f, 0.5f, 1);
-                Faceleft = false;
+                goingUp = false;
             }
         }
         else
         {
-            rb.velocity = new Vector2(speed, rb.velocity.y);
-            transform.localScale = new Vector3(0.5f, 0.5f, 1);
-            if (transform.position.x > rightpoint.position.x)
+            rb.velocity = new Vector2(rb.velocity.x, -speed);
+            transform.localScale = new Vector3(-0.75f, 0.75f, 1);
+            if (transform.position.y < downpoint.position.y)
             {
-                transform.localScale = new Vector3(-0.5f, 0.5f, 1);
-                Faceleft = true;
+                goingUp = true;
             }
         }
     }
