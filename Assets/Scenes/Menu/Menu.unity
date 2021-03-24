@@ -238,6 +238,16 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 4434173321734429324, guid: 46c4cd22f54fdee4eb1da1e4095bac8f,
+        type: 3}
+      propertyPath: themeMusicSlider
+      value: 
+      objectReference: {fileID: 1718032597}
+    - target: {fileID: 4434173321734429324, guid: 46c4cd22f54fdee4eb1da1e4095bac8f,
+        type: 3}
+      propertyPath: soundEffectSlider
+      value: 
+      objectReference: {fileID: 322575786}
     - target: {fileID: 4434173321734429325, guid: 46c4cd22f54fdee4eb1da1e4095bac8f,
         type: 3}
       propertyPath: m_Name
@@ -865,15 +875,15 @@ MonoBehaviour:
   m_FillRect: {fileID: 65134442}
   m_HandleRect: {fileID: 1131802128}
   m_Direction: 0
-  m_MinValue: -80
-  m_MaxValue: 0
+  m_MinValue: 0
+  m_MaxValue: 1
   m_WholeNumbers: 0
-  m_Value: 0
+  m_Value: 1
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1548806348}
-        m_MethodName: SetSound
+      - m_Target: {fileID: 310205657}
+        m_MethodName: SetSoundEffectVolume
         m_Mode: 0
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1102,15 +1112,15 @@ MonoBehaviour:
     m_LineSpacing: 1
   m_Text: "Each file is composed of a single object type, one JSON-object per-line.\r\n\r\nTake
     a look at some examples to get you started: https://github.com/Yelp/dataset-examples.\r\n\r\nNote:
-    the follow examples contain inline comments, which are technically not valid
-    JSON. This is done here to simplify the documentation and explaining the structure,
+    the follow examples contain inline comments, which are technically not valid JSON.
+    This is done here to simplify the documentation and explaining the structure,
     the JSON files you download will not contain any comments and will be fully valid
-    JSON.\n\nContains full review text data including the user_id that wrote the
-    review and the business_id the review is written for.\n\nThis font has inspired
-    from 'Senorella and the Glass Huarache' and it has created by Jayvee D. Enaguas
-    (Grand Chaos).\r\n\r\nVersion 2 - Added in glyphs for Czech alphabet.\r\n\r\n\xA9
-    2009, 2010, 2011, 2012 GrandChaos9000. Some Rights Reserved.\r\n(Under Licensed
-    by Creative Commons CC-BY-SA 3.0)"
+    JSON.\n\nContains full review text data including the user_id that wrote the review
+    and the business_id the review is written for.\n\nThis font has inspired from
+    'Senorella and the Glass Huarache' and it has created by Jayvee D. Enaguas (Grand
+    Chaos).\r\n\r\nVersion 2 - Added in glyphs for Czech alphabet.\r\n\r\n\xA9 2009,
+    2010, 2011, 2012 GrandChaos9000. Some Rights Reserved.\r\n(Under Licensed by Creative
+    Commons CC-BY-SA 3.0)"
 --- !u!222 &377124785
 CanvasRenderer:
   m_ObjectHideFlags: 0

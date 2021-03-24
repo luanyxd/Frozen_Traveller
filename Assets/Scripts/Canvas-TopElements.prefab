@@ -3683,6 +3683,16 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 3972098768392650624}
     m_Modifications:
+    - target: {fileID: 4434173321734429324, guid: 46c4cd22f54fdee4eb1da1e4095bac8f,
+        type: 3}
+      propertyPath: themeMusicSlider
+      value: 
+      objectReference: {fileID: 3972098767940808419}
+    - target: {fileID: 4434173321734429324, guid: 46c4cd22f54fdee4eb1da1e4095bac8f,
+        type: 3}
+      propertyPath: soundEffectSlider
+      value: 
+      objectReference: {fileID: 3972098768168192006}
     - target: {fileID: 4434173321734429325, guid: 46c4cd22f54fdee4eb1da1e4095bac8f,
         type: 3}
       propertyPath: m_Name
@@ -3745,6 +3755,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 46c4cd22f54fdee4eb1da1e4095bac8f, type: 3}
+--- !u!4 &2912069303199495010 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 4434173321734429327, guid: 46c4cd22f54fdee4eb1da1e4095bac8f,
+    type: 3}
+  m_PrefabInstance: {fileID: 1576513576132733421}
+  m_PrefabAsset: {fileID: 0}
 --- !u!114 &2912069303199495009 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 4434173321734429324, guid: 46c4cd22f54fdee4eb1da1e4095bac8f,
@@ -3757,9 +3773,3 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f2670da9c3d806d44b983d80991c1b72, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!4 &2912069303199495010 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 4434173321734429327, guid: 46c4cd22f54fdee4eb1da1e4095bac8f,
-    type: 3}
-  m_PrefabInstance: {fileID: 1576513576132733421}
-  m_PrefabAsset: {fileID: 0}
