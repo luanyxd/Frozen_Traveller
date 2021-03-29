@@ -17,6 +17,9 @@ public class Sound
     public void SetVolume(float vol)
     {
         this.volume = vol;
-        this.source.volume = vol;
+        if(this.source)
+            this.source.volume = vol;
+        else
+            Debug.Log("Can't find volume source in sound:"+this.name);
     }
 }

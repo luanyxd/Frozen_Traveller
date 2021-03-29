@@ -119,6 +119,7 @@ public class playercontroller_2 : MonoBehaviour
             Vector2 jumpVel = new Vector2(0.0f, jumpSpeed);
             rb2d.velocity = Vector2.up * jumpVel;
             canDoubleJump = true;
+            FindObjectOfType<AudioManager>().Play("Jump");
         }
         else
         {
@@ -130,6 +131,7 @@ public class playercontroller_2 : MonoBehaviour
                     Vector2 doubleJumpVel = new Vector2(0.0f, doubleJumpSpeed);
                     rb2d.velocity = Vector2.up * doubleJumpVel;
                     canDoubleJump = false;
+                    FindObjectOfType<AudioManager>().Play("DoubleJump");
                 }
 
 

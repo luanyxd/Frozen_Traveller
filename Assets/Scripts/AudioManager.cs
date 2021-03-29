@@ -1,10 +1,15 @@
 ﻿using UnityEngine.Audio;
 using System;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class AudioManager : MonoBehaviour
 {
+    private const string themeVolumePref = "ThemeMusicVolume";
+    private const string soundEffectPref = "SoundEffectVolume";
     public string themeMusicName; 
+    public Slider themeMusicSlider;
+    public Slider soundEffectSlider;
     public Sound[] sounds;
     // Start is called before the first frame update
     void Awake()
@@ -13,10 +18,21 @@ public class AudioManager : MonoBehaviour
         {
             s.source = gameObject.AddComponent<AudioSource>();
             s.source.clip = s.clip;
-            s.source.volume = s.volume;
+            if(s.name == themeMusicName){
+                float vol = PlayerPrefs.GetFloat(themeVolumePref, s.volume);
+                s.SetVolume(vol);
+            }
+            else{
+                float vol = PlayerPrefs.GetFloat(soundEffectPref, s.volume);
+                s.SetVolume(vol);
+            }
             s.source.pitch = s.pitch;
             s.source.loop = s.loop;
         }
+        float themeVol = PlayerPrefs.GetFloat(themeVolumePref, 1);
+        themeMusicSlider.value = themeVol;
+        float soundVol = PlayerPrefs.GetFloat(soundEffectPref, 1);
+        soundEffectSlider.value = soundVol;
     }
     void Start()
     {
@@ -69,6 +85,7 @@ public class AudioManager : MonoBehaviour
     public void SetThemeVolume(float vol)
     {
         SetVolume(themeMusicName, vol);
+        PlayerPrefs.SetFloat(themeVolumePref, vol);
     }
     public void SetSoundEffectVolume(float vol)
     {
@@ -79,5 +96,6 @@ public class AudioManager : MonoBehaviour
             }
             s.SetVolume(vol);
         }
+        PlayerPrefs.SetFloat(soundEffectPref, vol);
     }
 }

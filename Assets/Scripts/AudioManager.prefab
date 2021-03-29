@@ -44,6 +44,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   themeMusicName: Theme1
+  themeMusicSlider: {fileID: 0}
+  soundEffectSlider: {fileID: 0}
   sounds:
   - name: PlayerStep
     clip: {fileID: 8300000, guid: a028be27b3c28494592f11a6ae991669, type: 3}
@@ -65,6 +67,24 @@ MonoBehaviour:
     source: {fileID: 0}
   - name: Coin
     clip: {fileID: 8300000, guid: 5ac6242608b593342802f2c42954d298, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: Jump
+    clip: {fileID: 8300000, guid: 02a855e125cdf1e49ba5cbb84cb71aba, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: DoubleJump
+    clip: {fileID: 8300000, guid: 1534fc1c46699bd43ac431c838acf6eb, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: EnemyHit
+    clip: {fileID: 8300000, guid: ac3387bb90c1dd549953562480e95ec6, type: 3}
     volume: 1
     pitch: 1
     loop: 0
