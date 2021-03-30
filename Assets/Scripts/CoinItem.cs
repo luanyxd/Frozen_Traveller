@@ -6,6 +6,7 @@ public class CoinItem : MonoBehaviour
 {
 
     public playercontroller player;
+    public string achievementId;
 
     // Start is called before the first frame update
     void Start()
@@ -25,7 +26,7 @@ public class CoinItem : MonoBehaviour
         {
             //change the number of coins
             FindObjectOfType<CoinCollectedDisplayer>().IncreaseCoin();
-            FindObjectOfType<GlobalAchieve>().increaseCollectionAchievementById("level1_coin");
+            FindObjectOfType<GlobalAchieve>().increaseCollectionAchievementById(achievementId);
             FindObjectOfType<AudioManager>().Play("Coin");
             FindObjectOfType<EndTrigger>().winConditions--;
             Destroy(gameObject);
