@@ -29,23 +29,28 @@ public class Crab : MonoBehaviour
     }
     void OnCollisionEnter2D(Collision2D other)
     {
-
         if (other.gameObject.CompareTag("Player"))
         {
-            playerHealth.DamagePlayer(damage);
             if (other.gameObject.transform.position.x < transform.position.x)
             {
+                //Debug.Log(transform.position.x + 0.05f);
                 transform.localScale = new Vector3(-0.5f, 0.5f, 1);
+                transform.position = new Vector3(transform.position.x + 0.2f, transform.position.y, transform.position.z);
             }
             else
             {
                 transform.localScale = new Vector3(0.5f, 0.5f, 1);
+                transform.position = new Vector3(transform.position.x - 0.2f, transform.position.y, transform.position.z);
             }
-            attackState();
-            Invoke("attackState", 0.4f);
-            
+            if (!attack)
+            {
+                playerHealth.DamagePlayer(damage);
+                attackState();
+                Invoke("attackState", 0.4f);
+            }            
         }
     }
+
 
     void OnTriggerEnter2D(Collider2D other)
     {
