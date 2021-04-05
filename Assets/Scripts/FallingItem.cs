@@ -8,7 +8,8 @@ public class FallingItem : MonoBehaviour
     public Rigidbody2D rb;
     public int Speed;
     private PlayerHealth playerHealth;
-    public int damage;
+    public int score;
+    public Door_out door_out;
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
@@ -24,6 +25,7 @@ public class FallingItem : MonoBehaviour
     {
         if (other.gameObject.CompareTag("Player") && other.GetType().ToString() == "UnityEngine.CapsuleCollider2D")
         {
+            door_out.inBonusLevel = true;
             rb.velocity = new Vector2(0, 0-Speed);
             rb.isKinematic = false;
         }
@@ -35,7 +37,7 @@ public class FallingItem : MonoBehaviour
         if (other.gameObject.CompareTag("Player"))
         {
             rb.isKinematic = true;
-            playerHealth.DamagePlayer(damage);
+            //playerHealth.DamagePlayer(damage);
         }
         rb.velocity = new Vector2(0, 0);
         Destroy(gameObject);
