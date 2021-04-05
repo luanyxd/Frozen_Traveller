@@ -3081,6 +3081,21 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2912069303199495009, guid: 0aa6769bd22383a4796ca851cdfaf846,
+        type: 3}
+      propertyPath: themeMusicName
+      value: Theme3
+      objectReference: {fileID: 0}
+    - target: {fileID: 2912069303199495009, guid: 0aa6769bd22383a4796ca851cdfaf846,
+        type: 3}
+      propertyPath: sounds.Array.data[1].clip
+      value: 
+      objectReference: {fileID: 8300000, guid: f51f19a8d01eb0d4b8ad41775e3110d7, type: 3}
+    - target: {fileID: 2912069303199495009, guid: 0aa6769bd22383a4796ca851cdfaf846,
+        type: 3}
+      propertyPath: sounds.Array.data[1].name
+      value: Theme3
+      objectReference: {fileID: 0}
     - target: {fileID: 3972098767042274554, guid: 0aa6769bd22383a4796ca851cdfaf846,
         type: 3}
       propertyPath: m_AnchorMax.x

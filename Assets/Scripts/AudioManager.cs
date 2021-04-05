@@ -36,7 +36,7 @@ public class AudioManager : MonoBehaviour
     }
     void Start()
     {
-        Play("Theme1");
+        Play(themeMusicName);
     }
 
     void safePlay(Sound s)
