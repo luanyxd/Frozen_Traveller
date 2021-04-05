@@ -45,7 +45,8 @@ public class LevelChanger : MonoBehaviour
     IEnumerator LoadLevel(int levelIndex)
     {
         // play animation
-        transition.SetTrigger("Start");
+        //transition.SetTrigger("Start");
+        transition.SetBool("Close", true);
 
         // wait animation complete
         yield return new WaitForSeconds(transitionTime);

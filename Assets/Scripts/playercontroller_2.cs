@@ -247,4 +247,14 @@ public class playercontroller_2 : MonoBehaviour
         enableMoving = false;
         anim.SetTrigger("Die");
     }
+    
+    public Vector3 getPosition()
+    {
+        return rb2d.transform.position;
+    }
+
+    public void setPosition(Vector3 p)
+    {
+        rb2d.position = p;
+    }
 }

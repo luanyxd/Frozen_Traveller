@@ -4,8 +4,6 @@ using UnityEngine;
 
 public class CoinItem : MonoBehaviour
 {
-
-    public playercontroller player;
     public string achievementId;
 
     // Start is called before the first frame update
@@ -30,9 +28,6 @@ public class CoinItem : MonoBehaviour
             FindObjectOfType<AudioManager>().Play("Coin");
             FindObjectOfType<EndTrigger>().winConditions--;
             Destroy(gameObject);
-
-            //
-            //player.increaseCoin();
 
         }
     }
