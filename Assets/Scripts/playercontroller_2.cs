@@ -192,6 +192,8 @@ public class playercontroller_2 : MonoBehaviour
                 // change to angry mode and animation
                 isNormal = false;
                 anim.SetBool("Angry", true);
+                FindObjectOfType<AudioManager>().Play("AngryMode");
+
 
                 // TODO: wait for several seconds
                 clockAnim.SetBool("DisplayClock", true);
