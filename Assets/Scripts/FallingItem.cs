@@ -6,9 +6,10 @@ public class FallingItem : MonoBehaviour
 {
     // Start is called before the first frame update
     public Rigidbody2D rb;
-    public int Speed;
+    public float Speed;
     private PlayerHealth playerHealth;
-    public int damage;
+    public int score;
+    public Door_out door_out;
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
@@ -24,8 +25,8 @@ public class FallingItem : MonoBehaviour
     {
         if (other.gameObject.CompareTag("Player") && other.GetType().ToString() == "UnityEngine.CapsuleCollider2D")
         {
-            rb.velocity = new Vector2(0, 0-Speed);
-            rb.isKinematic = false;
+            door_out.inBonusLevel = true;
+            rb.velocity = new Vector2(0, Speed/(-2.0f));
         }
     }
 
@@ -34,8 +35,7 @@ public class FallingItem : MonoBehaviour
     {
         if (other.gameObject.CompareTag("Player"))
         {
-            rb.isKinematic = true;
-            playerHealth.DamagePlayer(damage);
+            //playerHealth.DamagePlayer(damage);
         }
         rb.velocity = new Vector2(0, 0);
         Destroy(gameObject);

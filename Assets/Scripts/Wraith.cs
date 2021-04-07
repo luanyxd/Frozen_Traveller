@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using Pathfinding;
 using UnityEngine;
 
 public class Wraith : MonoBehaviour
@@ -10,22 +11,20 @@ public class Wraith : MonoBehaviour
     public bool hurt;
     public bool attack;
     private PlayerHealth playerHealth;
-    public Transform toppoint, downpoint;
-    private bool goingUp = false;
-    public float speed;
+    public AIPath aiPath;
     public int health;
     // Start is called before the first frame update
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
         playerHealth = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerHealth>();
-        transform.DetachChildren();
     }
 
     // Update is called once per frame
     void Update()
     {
         Movement();
+        Debug.Log(rb.velocity.x);
     }
     void OnCollisionEnter2D(Collision2D other)
     {
@@ -88,27 +87,14 @@ public class Wraith : MonoBehaviour
 
     void Movement()
     {
-        if (hurt || attack)
+
+        if (aiPath.desiredVelocity.x<0)
         {
-            rb.velocity = new Vector2(0, rb.velocity.y);
-        }
-        else if (goingUp)
-        {
-            rb.velocity = new Vector2(rb.velocity.x, speed);
             transform.localScale = new Vector3(-0.75f, 0.75f, 1);
-            if (transform.position.y > toppoint.position.y)
-            {
-                goingUp = false;
-            }
         }
         else
         {
-            rb.velocity = new Vector2(rb.velocity.x, -speed);
-            transform.localScale = new Vector3(-0.75f, 0.75f, 1);
-            if (transform.position.y < downpoint.position.y)
-            {
-                goingUp = true;
-            }
+            transform.localScale = new Vector3(0.75f, 0.75f, 1);
         }
     }
     void MyDestroy()
