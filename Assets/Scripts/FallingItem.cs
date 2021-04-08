@@ -14,6 +14,7 @@ public class FallingItem : MonoBehaviour
     {
         rb = GetComponent<Rigidbody2D>();
         playerHealth = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerHealth>();
+        door_out = FindObjectOfType<Door_out>();
     }
 
     // Update is called once per frame
