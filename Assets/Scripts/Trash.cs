@@ -27,6 +27,9 @@ public class Trash : MonoBehaviour
             //CoinCollectedDisplayer.currentamount += 1;
             //FindObjectOfType<AudioManager>().Play("Coin");
             //FindObjectOfType<EndTrigger>().winConditions--;
+            FindObjectOfType<CoinCollectedDisplayer>().IncreaseNum(2);
+            //FindObjectOfType<GlobalAchieve>().increaseCollectionAchievementById(achievementId);
+            FindObjectOfType<AudioManager>().Play("Coin");
             Destroy(gameObject);
 
             //
