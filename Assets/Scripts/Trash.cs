@@ -6,6 +6,7 @@ public class Trash : MonoBehaviour
 {
 
     //public playercontroller player;
+    public string achievementId;
 
     // Start is called before the first frame update
     void Start()
@@ -24,7 +25,7 @@ public class Trash : MonoBehaviour
         if (other.gameObject.CompareTag("Player") && other.GetType().ToString()== "UnityEngine.CapsuleCollider2D")
         {
             //change the number of trash
-            //CoinCollectedDisplayer.currentamount += 1;
+            FindObjectOfType<GlobalAchieve>().increaseCollectionAchievementById(achievementId);
             //FindObjectOfType<AudioManager>().Play("Coin");
             //FindObjectOfType<EndTrigger>().winConditions--;
             FindObjectOfType<CoinCollectedDisplayer>().IncreaseNum(2);

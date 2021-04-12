@@ -60,6 +60,24 @@ MonoBehaviour:
     achImage: {fileID: 21300000, guid: c3878b09680bca74686a39d986b6bfd9, type: 3}
     active: 0
     code: 0
+  - id: level1_chest
+    title: A chest in the woods
+    description: Here is a chest. Why there is always a chest?
+    achImage: {fileID: 21300000, guid: 871c68e03f708a149a41d28b6d79bd04, type: 3}
+    active: 0
+    code: 0
+  - id: level1_diamond
+    title: Diamond in the woods
+    description: You got the diamond in the woods. That's something.
+    achImage: {fileID: 21300000, guid: 6d22f6eea12364a4ba3b58ea2ddde8c9, type: 3}
+    active: 0
+    code: 0
+  - id: level1_time
+    title: Speed and woods
+    description: You arrived the tree within 30 seconds from begin of the game.
+    achImage: {fileID: 21300000, guid: 8f14a3da963c27b4f955bb3a3e6d7f69, type: 3}
+    active: 0
+    code: 0
   collectionAchievements:
   - id: level1_coin
     title: Coin Collector
