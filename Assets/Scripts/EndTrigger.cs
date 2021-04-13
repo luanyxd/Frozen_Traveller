@@ -8,6 +8,7 @@ public class EndTrigger : MonoBehaviour
     public GameObject hint;
     public DialogueTrigger dialogueTrigger;
     public int winConditions;
+    public string levelCompleteAchievementName;
 
     private bool isCommunicating;
 
@@ -29,7 +30,7 @@ public class EndTrigger : MonoBehaviour
         if (winConditions <= 0)
         {
             gameManager.CompleteLevel(true);
-            FindObjectOfType<GlobalAchieve>().TriggerAchievementById("level1_complete");
+            FindObjectOfType<GlobalAchieve>().TriggerAchievementById(levelCompleteAchievementName);
         } else if (!isCommunicating)
         {
             isCommunicating = true;

@@ -201,3 +201,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 89e1790c01f789143a248b3c79f7df9f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  achievementId: level2_trash
