@@ -37,6 +37,9 @@ public class FallingItem : MonoBehaviour
         if (other.gameObject.CompareTag("Player"))
         {
             //playerHealth.DamagePlayer(damage);
+            FindObjectOfType<CoinCollectedDisplayer>().IncreaseNum(score);
+            //FindObjectOfType<GlobalAchieve>().increaseCollectionAchievementById(achievementId);
+            FindObjectOfType<AudioManager>().Play("Coin");
         }
         rb.velocity = new Vector2(0, 0);
         Destroy(gameObject);
