@@ -164,7 +164,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dca50b298c00b654b97bf1664e113c8a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 0}
+  achievementId: level3_coin
 --- !u!1 &6325042577416584810
 GameObject:
   m_ObjectHideFlags: 0
