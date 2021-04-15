@@ -28,7 +28,7 @@ public class CoinCollectedDisplayer : MonoBehaviour
     }
     public void IncreaseNum(int num)
     {
-        currentamount+=num;
+        currentamount += num;
         amountText.text = currentamount.ToString();
     }
 }

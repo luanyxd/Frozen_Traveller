@@ -4,7 +4,12 @@ using UnityEngine;
 
 public class JumpButton : MonoBehaviour
 {
-    public playercontroller player;
+    private playercontroller player;
+
+    void Start()
+    {
+        player = FindObjectOfType<playercontroller>();
+    }
 
     public void Jump()
     {

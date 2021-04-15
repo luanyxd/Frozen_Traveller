@@ -27,6 +27,7 @@ public class LevelComplete : MonoBehaviour
 
     public void Retry()
     {
+        Debug.Log("Retry!");
         levelChanger.LoadCurrentLevel();
     }
 

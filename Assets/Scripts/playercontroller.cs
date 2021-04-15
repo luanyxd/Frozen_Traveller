@@ -16,7 +16,6 @@ public class playercontroller : MonoBehaviour
 
     // change mode button
     public bool isNormal;
-    public bool canAngry;
     public int angryDuration;
 
     // clock
@@ -42,29 +41,7 @@ public class playercontroller : MonoBehaviour
 
     //private PlayerInputaction controls;
     private Vector2 move;
-    //void Awake()
-    //{
-    //    controls = new PlayerInputaction();
-
-    //    controls.GamePlay.Move.performed += ctx => move = ctx.ReadValue<Vector2>();
-    //    controls.GamePlay.Move.canceled += ctx => move = Vector2.zero;
-    //    controls.GamePlay.Attack.started += ctx => Attack();
-    //    controls.GamePlay.Jump.started += ctx => Jump();
-
-
-
-    //}
-    //void OnEnable()
-    //{
-    //    controls.GamePlay.Enable();
-    //}
-
-    //void OnDisable()
-    //{
-    //    controls.GamePlay.Disable();
-    //}
-
-
+    public Snowballhit snowballhit;
 
     // Start is called before the first frame update
     void Start()
@@ -75,12 +52,8 @@ public class playercontroller : MonoBehaviour
 
         enableMoving = true;
 
-        // currentHealth = maxHealth;
-        //healthBar.SetMaximum(maxHealth);
-
-        canAngry = true;
         isNormal = true;
-        angryDuration = 5;
+        angryDuration = 10;
 
         countdownClock.timeActive = false;
     }
@@ -150,10 +123,6 @@ public class playercontroller : MonoBehaviour
         }
     }
 
-
-
-      
-    
     public void Jump()
 
     {
@@ -189,34 +158,15 @@ public class playercontroller : MonoBehaviour
     }
     public void Attack()
     {
-        // if (Input.GetButtonDown("Attack"))
+        anim.SetBool("idle", true);
+        anim.SetTrigger("Attack");
+        if (isNormal)
         {
-            anim.SetTrigger("Attack");
+            snowballhit.Shoot();
         }
-        // anim.SetBool("idle", true);
-    }
-    /*
-    public void TakeDamage(int damage)
-    {
-        currentHealth -= damage;
-        healthBar.SetHealth(currentHealth);
-    }
-
-    // TODO: change mode, flipping isNormal variable
-     */
-    
-    // change mode by button
-    public void ChangeMode()
-    {
-        if (canAngry && isNormal)
+        else
         {
-            // TODO: change to angry mode
-            isNormal = false;
-            anim.SetBool("Angry", true);
-        } else if (!isNormal)
-        {
-            isNormal = true;
-            anim.SetBool("Angry", false);
+            snowballhit.Shoot1();
         }
     }
 
@@ -246,15 +196,26 @@ public class playercontroller : MonoBehaviour
         }
     }
 
-    public void IncreaseCoin()
-    {
-        ////coinAmount++;
-        //coinCollectedDisplayer.IncreaseCoin();
-    }
-
     public void setIdle()
     {
         rb2d.velocity = Vector2.zero;
         enableMoving = false;
+    }
+
+    public void setDie()
+    {
+        Debug.Log("die!");
+        enableMoving = false;
+        anim.SetTrigger("Die");
+    }
+
+    public Vector3 getPosition()
+    {
+        return rb2d.transform.position;
+    }
+
+    public void setPosition(Vector3 p)
+    {
+        rb2d.position = p;
     }
 }

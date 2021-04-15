@@ -215,7 +215,6 @@ MonoBehaviour:
   doubleJumpSpeed: 6
   joystick: {fileID: 0}
   isNormal: 1
-  canAngry: 1
   angryDuration: 10
   timeDisplayer: {fileID: 0}
   countdownClock: {fileID: 0}
@@ -224,6 +223,7 @@ MonoBehaviour:
   currentHealth: 0
   healthBar: {fileID: 0}
   coinCollectedDisplayer: {fileID: 0}
+  snowballhit: {fileID: 460481037486338064}
 --- !u!60 &1081604268
 PolygonCollider2D:
   m_ObjectHideFlags: 0

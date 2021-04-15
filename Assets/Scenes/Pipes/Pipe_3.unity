@@ -1093,7 +1093,7 @@ MonoBehaviour:
       sentence: So many bad things have happenned because of human activities...
     - isNPC: 1
       sentence: True. Hurry up, you need to avoid the falling items within some period,
-        or you will die! That's dangerous!
+        or you will die! That's dangerous! You can crush some ice cubes to move forward.
     - isNPC: 0
       sentence: Fine. Bye Mr. Turtel!
 --- !u!114 &956039765

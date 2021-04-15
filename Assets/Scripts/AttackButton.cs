@@ -4,12 +4,15 @@ using UnityEngine;
 
 public class AttackButton : MonoBehaviour
 {
-    public playercontroller player;
-    public Snowballhit snowballhit;
+    private playercontroller player;
+
+    void Start()
+    {
+        player = FindObjectOfType<playercontroller>();
+    }
 
     public void Attack()
     {
         player.Attack();
-        snowballhit.Shoot();
     }
 }

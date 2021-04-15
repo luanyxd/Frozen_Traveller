@@ -165,23 +165,6 @@ public class playercontroller_2 : MonoBehaviour
          }
         // anim.SetBool("idle", true);
     }
-    /*
-    public void TakeDamage(int damage)
-    {
-        currentHealth -= damage;
-        healthBar.SetHealth(currentHealth);
-    }
-
-    // TODO: change mode, flipping isNormal variable
-     */
-    public void ChangeMode()
-    {
-        if (canAngry && isNormal)
-        {
-            // TODO: change to angry mode
-            isNormal = false;
-        }
-    }
 
     public IEnumerator BecomeAngryCoroutine()
     {
@@ -211,11 +194,6 @@ public class playercontroller_2 : MonoBehaviour
                 anim.SetBool("Angry", false);
             }
         }
-    }
-    public void IncreaseCoin()
-    {
-        ////coinAmount++;
-        //coinCollectedDisplayer.IncreaseCoin();
     }
 
     public void stepSound()
