@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
+using UnityEngine.SceneManagement;
 
 public class DialogueManager : MonoBehaviour
 {
@@ -42,7 +43,10 @@ public class DialogueManager : MonoBehaviour
         if (nameSentences.Count == 0)
         {
             EndDialogue();
-            Debug.Log("calling EndDialog ==================================================");
+            if (SceneManager.GetActiveScene().buildIndex == 7)
+            {
+                FindObjectOfType<LevelChanger>().LoadNextLevel();
+            }
             return;
         }
 
