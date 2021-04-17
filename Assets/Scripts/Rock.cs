@@ -7,6 +7,7 @@ public class Rock : MonoBehaviour
     public Rigidbody2D rb;
     public int damage;
     private PlayerHealth playerHealth;
+    private bool falled = false;
     // Start is called before the first frame update
     void Start()
     {
@@ -21,11 +22,15 @@ public class Rock : MonoBehaviour
     }
     void OnTriggerEnter2D(Collider2D other)
     {
+        
         if (other.gameObject.CompareTag("Player") && other.GetType().ToString() == "UnityEngine.CapsuleCollider2D")
         {
+            if (falled) return;
+            falled = true;
             rb.isKinematic = false;
-            rb.gravityScale = 20;
-            rb.velocity = new Vector2(-20, 0);
+            rb.gravityScale = 1;
+            rb.velocity = new Vector2(-3, 0);
+            rb.mass = 100;
           
         }
     }

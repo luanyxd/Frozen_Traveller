@@ -8,6 +8,7 @@ public class Fireball : MonoBehaviour
     public Rigidbody2D rb;
     public Animator animator;
     public int damage;
+    public bool causeDamage = false;
     private PlayerHealth playerHealth;
     void Start()
     {
@@ -27,6 +28,8 @@ public class Fireball : MonoBehaviour
  
     void OnCollisionEnter2D(Collision2D other)
     {
+        if (causeDamage) return;
+        causeDamage = true;
         if (other.gameObject.CompareTag("Player"))
         {
             rb.isKinematic = true;
