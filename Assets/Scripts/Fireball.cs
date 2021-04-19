@@ -34,6 +34,7 @@ public class Fireball : MonoBehaviour
         {
             rb.isKinematic = true;
             playerHealth.DamagePlayer(damage);
+            FindObjectOfType<AudioManager>().Play("Hit");
         }
         animator.SetBool("explode", true);
         rb.velocity = new Vector2(0, 0);
