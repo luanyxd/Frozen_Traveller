@@ -5414,6 +5414,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2912069303199495009, guid: 0aa6769bd22383a4796ca851cdfaf846,
         type: 3}
+      propertyPath: sounds.Array.size
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 2912069303199495009, guid: 0aa6769bd22383a4796ca851cdfaf846,
+        type: 3}
       propertyPath: sounds.Array.data[1].clip
       value: 
       objectReference: {fileID: 8300000, guid: f51f19a8d01eb0d4b8ad41775e3110d7, type: 3}
@@ -5421,6 +5426,46 @@ PrefabInstance:
         type: 3}
       propertyPath: sounds.Array.data[1].name
       value: Theme3
+      objectReference: {fileID: 0}
+    - target: {fileID: 2912069303199495009, guid: 0aa6769bd22383a4796ca851cdfaf846,
+        type: 3}
+      propertyPath: sounds.Array.data[8].clip
+      value: 
+      objectReference: {fileID: 8300000, guid: ddbb87ab649862f4882e99f22b69f22a, type: 3}
+    - target: {fileID: 2912069303199495009, guid: 0aa6769bd22383a4796ca851cdfaf846,
+        type: 3}
+      propertyPath: sounds.Array.data[8].name
+      value: IceCrack
+      objectReference: {fileID: 0}
+    - target: {fileID: 2912069303199495009, guid: 0aa6769bd22383a4796ca851cdfaf846,
+        type: 3}
+      propertyPath: sounds.Array.data[9].clip
+      value: 
+      objectReference: {fileID: 8300000, guid: 1e9599f156784594dac79f813f6cfe65, type: 3}
+    - target: {fileID: 2912069303199495009, guid: 0aa6769bd22383a4796ca851cdfaf846,
+        type: 3}
+      propertyPath: sounds.Array.data[9].name
+      value: TrapPlatform
+      objectReference: {fileID: 0}
+    - target: {fileID: 2912069303199495009, guid: 0aa6769bd22383a4796ca851cdfaf846,
+        type: 3}
+      propertyPath: sounds.Array.data[8].pitch
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2912069303199495009, guid: 0aa6769bd22383a4796ca851cdfaf846,
+        type: 3}
+      propertyPath: sounds.Array.data[9].pitch
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2912069303199495009, guid: 0aa6769bd22383a4796ca851cdfaf846,
+        type: 3}
+      propertyPath: sounds.Array.data[8].volume
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2912069303199495009, guid: 0aa6769bd22383a4796ca851cdfaf846,
+        type: 3}
+      propertyPath: sounds.Array.data[9].volume
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3972098767042274554, guid: 0aa6769bd22383a4796ca851cdfaf846,
         type: 3}

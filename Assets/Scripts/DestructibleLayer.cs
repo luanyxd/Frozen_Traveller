@@ -59,7 +59,7 @@ public class DestructibleLayer : MonoBehaviour
             position = destructibleTilemap.WorldToCell(pos8);
             destructibleTilemap.SetTile(position, null);
 
-
+            FindObjectOfType<AudioManager>().Play("IceCrack");
             Destroy(other.gameObject);
         }
     }

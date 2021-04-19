@@ -24,6 +24,7 @@ public class TrapPlatform : MonoBehaviour
         if (other.gameObject.CompareTag("Player")
             && other.GetType().ToString() == "UnityEngine.BoxCollider2D")
         {
+            FindObjectOfType<AudioManager>().TurnOn("TrapPlatform");
             anim.SetTrigger("Collapse");
         }
     }
@@ -35,6 +36,7 @@ public class TrapPlatform : MonoBehaviour
 
     void DestroyTrapPlatform()
     {
+        FindObjectOfType<AudioManager>().TurnOff("TrapPlatform");
         Destroy(gameObject);
     }
 }
