@@ -26,7 +26,7 @@ public class MainMenu : MonoBehaviour
         //}
 
         int previous_level = PlayerPrefs.GetInt("previous_level", -1);
-        print("previous_level: " + previous_level.ToString());
+        Debug.Log("previous_level: " + previous_level.ToString());
         if (previous_level == -1)
             return;
         string level = (previous_level / 2).ToString();

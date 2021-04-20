@@ -17,6 +17,7 @@ public class LevelComplete : MonoBehaviour
 
     public void LoadNextLevel()
     {
+        Debug.Log("in loadnextlevel in levelcomplete, previous_level: " + PlayerPrefs.GetInt("previous_level", -1));
         levelChanger.LoadNextLevel();
     }
 
@@ -80,7 +81,9 @@ public class LevelComplete : MonoBehaviour
             // save for continue: levelnumber, previous(history, final_time, final_score, potion)
             if (PlayerPrefs.GetInt("previous_level",-1) == -1 || PlayerPrefs.GetInt("previous_level") <= SceneManager.GetActiveScene().buildIndex + 1)
             {
+                Debug.Log("in levelcomplete,before saving, previous_level: " + PlayerPrefs.GetInt("previous_level",-1));
                 PlayerPrefs.SetInt("previous_level", SceneManager.GetActiveScene().buildIndex + 1);
+                Debug.Log("in levelcomplete, save previous_level: " + PlayerPrefs.GetInt("previous_level"));
                 PlayerPrefs.SetFloat("previous_" + "shortest_" + level + "_time", PlayerPrefs.GetFloat("shortest_" + level + "_time"));
                 PlayerPrefs.SetInt("previous_" + "highest_" + level + "_score", PlayerPrefs.GetInt("highest_" + level + "_score"));
                 PlayerPrefs.SetFloat("previous_" + "final_time", PlayerPrefs.GetFloat("final_time"));
@@ -119,6 +122,7 @@ public class LevelComplete : MonoBehaviour
             // save for continue: levelnumber, previous(history, final_time, final_score, potion)
             if (PlayerPrefs.GetInt("previous_level", -1) == -1 || PlayerPrefs.GetInt("previous_level") <= SceneManager.GetActiveScene().buildIndex)
             {
+                Debug.Log("lose, previous level: " + PlayerPrefs.GetInt("previous_level").ToString());
                 PlayerPrefs.SetInt("previous_level", SceneManager.GetActiveScene().buildIndex);
                 PlayerPrefs.SetFloat("previous_" + "shortest_" + level + "_time", PlayerPrefs.GetFloat("shortest_" + level + "_time"));
                 PlayerPrefs.SetInt("previous_" + "highest_" + level + "_score", PlayerPrefs.GetInt("highest_" + level + "_score"));

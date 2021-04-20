@@ -19,6 +19,7 @@ public class Portal : MonoBehaviour
         {
             arriveProtal = true;
             FindObjectOfType<LevelChanger>().LoadNextLevel();
+            Debug.Log("in portal, previous_level: " + PlayerPrefs.GetInt("previous_level", -1));
         }
     }
 }   

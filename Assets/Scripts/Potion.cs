@@ -16,6 +16,7 @@ public class Potion : MonoBehaviour
     }
     void OnTriggerEnter2D(Collider2D other)
     {
+        Debug.Log("in potion,before saving, previous_level: " + PlayerPrefs.GetInt("previous_level", -1));
         if (other.gameObject.CompareTag("Player"))
         {
             Debug.Log("Player!");

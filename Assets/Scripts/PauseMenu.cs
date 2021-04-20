@@ -26,8 +26,21 @@ public class PauseMenu : MonoBehaviour
         // back to main menu, may consider other settings
         Time.timeScale = 1f;
         int previous_level = PlayerPrefs.GetInt("previous_level", -1);
-        print("previous_level: " + previous_level.ToString());
+        Debug.Log("in pause, press mainmenu, previous_level: " + PlayerPrefs.GetInt("previous_level"));
         FindObjectOfType<LevelChanger>().LoadMainMenu();
+
+        if (PlayerPrefs.GetInt("previous_level", -1) == -1 || PlayerPrefs.GetInt("previous_level") <= SceneManager.GetActiveScene().buildIndex)
+        {
+            string level = (SceneManager.GetActiveScene().buildIndex / 2).ToString();
+            Debug.Log("lose, previous level: " + PlayerPrefs.GetInt("previous_level").ToString());
+            PlayerPrefs.SetInt("previous_level", SceneManager.GetActiveScene().buildIndex);
+            PlayerPrefs.SetFloat("previous_" + "shortest_" + level + "_time", PlayerPrefs.GetFloat("shortest_" + level + "_time"));
+            PlayerPrefs.SetInt("previous_" + "highest_" + level + "_score", PlayerPrefs.GetInt("highest_" + level + "_score"));
+            PlayerPrefs.SetFloat("previous_" + "final_time", PlayerPrefs.GetFloat("final_time"));
+            PlayerPrefs.SetInt("previous_" + "final_score", PlayerPrefs.GetInt("final_score"));
+            PlayerPrefs.SetInt("potion", PlayerPrefs.GetInt("potion"));
+        }
+
         //SaveSystem.SavePlayer(FindObjectOfType<playercontroller_2>(), SceneManager.GetActiveScene().buildIndex);
     }
 }
