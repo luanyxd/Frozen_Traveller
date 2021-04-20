@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
+using UnityEngine.SceneManagement;
 
 public class ChangeModeButton : MonoBehaviour
 {
@@ -12,7 +13,10 @@ public class ChangeModeButton : MonoBehaviour
     void Start()
     {
         player = FindObjectOfType<playercontroller>();
-        bottleAmount = 0;
+        if (SceneManager.GetActiveScene().buildIndex < 3)
+            bottleAmount = 0;
+        else
+            bottleAmount = PlayerPrefs.GetInt("potion");
         amountText.text = bottleAmount.ToString();
     }
 
@@ -37,5 +41,10 @@ public class ChangeModeButton : MonoBehaviour
             bottleAmount -= 1;
             StartCoroutine(player.BecomeAngryCoroutine());
         }
+    }
+
+    public int GetPotionAmount()
+    {
+        return bottleAmount;
     }
 }

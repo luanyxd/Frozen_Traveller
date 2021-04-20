@@ -25,7 +25,9 @@ public class PauseMenu : MonoBehaviour
         GameIsPaused = false;
         // back to main menu, may consider other settings
         Time.timeScale = 1f;
+        int previous_level = PlayerPrefs.GetInt("previous_level", -1);
+        print("previous_level: " + previous_level.ToString());
         FindObjectOfType<LevelChanger>().LoadMainMenu();
-        SaveSystem.SavePlayer(FindObjectOfType<playercontroller_2>(), SceneManager.GetActiveScene().buildIndex);
+        //SaveSystem.SavePlayer(FindObjectOfType<playercontroller_2>(), SceneManager.GetActiveScene().buildIndex);
     }
 }

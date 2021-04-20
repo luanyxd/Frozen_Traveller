@@ -31,8 +31,9 @@ public class LevelComplete : MonoBehaviour
         levelChanger.LoadCurrentLevel();
     }
 
-    public void SetlevelMessage(bool winGame)
+    public void SetlevelMessage(bool winGame, float totalTime, int score)
     {
+        string level = (SceneManager.GetActiveScene().buildIndex / 2).ToString();
         if (winGame)
         {
             win = true;
@@ -41,7 +42,53 @@ public class LevelComplete : MonoBehaviour
             retryButton.SetActive(false);
             nextButton.SetActive(true);
 
-            SaveSystem.SavePlayer(FindObjectOfType<playercontroller_2>(), SceneManager.GetActiveScene().buildIndex + 1);
+            // consider history records
+            float shortest_time;
+            int highest_score;
+            if (PlayerPrefs.GetInt("highest_" + level+ "_score", -1) == -1)
+            {
+                // no history records
+                shortest_time = 9999f;
+                highest_score = 0;
+                PlayerPrefs.SetFloat("shortest_" + level + "_time", totalTime);
+                PlayerPrefs.SetInt("highest_" + level + "_score", score);
+            } else
+            {
+                // have history
+                shortest_time = PlayerPrefs.GetFloat("shortest_" + level + "_time");
+                highest_score = PlayerPrefs.GetInt("highest_" + level + "_score");
+                if (shortest_time > totalTime)
+                    PlayerPrefs.SetFloat("shortest_" + level + "_time", totalTime);
+                if (highest_score < score)
+                    PlayerPrefs.SetInt("highest_" + level + "_score", score);
+            }
+            SetHistoryHighest(shortest_time, highest_score);
+
+            // save potion, final_time, final_score
+            if (level == "1")
+            {
+                PlayerPrefs.SetInt("potion", FindObjectOfType<ChangeModeButton>().GetPotionAmount());
+                PlayerPrefs.SetFloat("final_time", totalTime);
+                PlayerPrefs.SetInt("final_score", score);
+            } else
+            {
+                PlayerPrefs.SetInt("potion", PlayerPrefs.GetInt("potion") + FindObjectOfType<ChangeModeButton>().GetPotionAmount());
+                PlayerPrefs.SetFloat("final_time", PlayerPrefs.GetFloat("final_time") +totalTime);
+                PlayerPrefs.SetInt("final_score", PlayerPrefs.GetInt("final_score") + score);
+            }
+            
+            // save for continue: levelnumber, previous(history, final_time, final_score, potion)
+            if (PlayerPrefs.GetInt("previous_level",-1) == -1 || PlayerPrefs.GetInt("previous_level") <= SceneManager.GetActiveScene().buildIndex + 1)
+            {
+                PlayerPrefs.SetInt("previous_level", SceneManager.GetActiveScene().buildIndex + 1);
+                PlayerPrefs.SetFloat("previous_" + "shortest_" + level + "_time", PlayerPrefs.GetFloat("shortest_" + level + "_time"));
+                PlayerPrefs.SetInt("previous_" + "highest_" + level + "_score", PlayerPrefs.GetInt("highest_" + level + "_score"));
+                PlayerPrefs.SetFloat("previous_" + "final_time", PlayerPrefs.GetFloat("final_time"));
+                PlayerPrefs.SetInt("previous_" + "final_score", PlayerPrefs.GetInt("final_score"));
+                PlayerPrefs.SetInt("previous_" + "potion", PlayerPrefs.GetInt("potion"));
+            }
+
+            //SaveSystem.SavePlayer(FindObjectOfType<playercontroller_2>(), SceneManager.GetActiveScene().buildIndex + 1);
         } else
         {
             win = false;
@@ -50,7 +97,37 @@ public class LevelComplete : MonoBehaviour
             retryButton.SetActive(true);
             nextButton.SetActive(false);
 
-            SaveSystem.SavePlayer(FindObjectOfType<playercontroller_2>(), SceneManager.GetActiveScene().buildIndex);
+            // consider history records
+            float shortest_time;
+            int highest_score;
+            if (PlayerPrefs.GetInt("highest_" + level + "_score", -1) == -1)
+            {
+                // no history records
+                shortest_time = 9999f;
+                highest_score = 0;
+                PlayerPrefs.SetFloat("shortest_" + level + "_time", totalTime);
+                PlayerPrefs.SetInt("highest_" + level + "_score", score);
+            }
+            else
+            {
+                // have history
+                shortest_time = PlayerPrefs.GetFloat("shortest_" + level + "_time");
+                highest_score = PlayerPrefs.GetInt("highest_" + level + "_score");
+            }
+            SetHistoryHighest(shortest_time, highest_score);
+
+            // save for continue: levelnumber, previous(history, final_time, final_score, potion)
+            if (PlayerPrefs.GetInt("previous_level", -1) == -1 || PlayerPrefs.GetInt("previous_level") <= SceneManager.GetActiveScene().buildIndex)
+            {
+                PlayerPrefs.SetInt("previous_level", SceneManager.GetActiveScene().buildIndex);
+                PlayerPrefs.SetFloat("previous_" + "shortest_" + level + "_time", PlayerPrefs.GetFloat("shortest_" + level + "_time"));
+                PlayerPrefs.SetInt("previous_" + "highest_" + level + "_score", PlayerPrefs.GetInt("highest_" + level + "_score"));
+                PlayerPrefs.SetFloat("previous_" + "final_time", PlayerPrefs.GetFloat("final_time"));
+                PlayerPrefs.SetInt("previous_" + "final_score", PlayerPrefs.GetInt("final_score"));
+                PlayerPrefs.SetInt("potion", PlayerPrefs.GetInt("potion"));
+            }
+
+            //SaveSystem.SavePlayer(FindObjectOfType<playercontroller_2>(), SceneManager.GetActiveScene().buildIndex);
         }
     }
 

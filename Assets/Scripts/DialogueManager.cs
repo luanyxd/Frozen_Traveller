@@ -10,6 +10,8 @@ public class DialogueManager : MonoBehaviour
     public TMP_Text nameText;
     public TMP_Text dialogueText;
 
+    public GameObject gameComplete;
+
     public Animator animator;
 
     private Queue<Dialogue.nameSentence> nameSentences; // FIFO Collection
@@ -45,7 +47,7 @@ public class DialogueManager : MonoBehaviour
             EndDialogue();
             if (SceneManager.GetActiveScene().buildIndex == 7)
             {
-                FindObjectOfType<LevelChanger>().LoadNextLevel();
+                gameComplete.SetActive(true);
             }
             return;
         }
