@@ -37,6 +37,7 @@ public class playercontroller : MonoBehaviour
     private Animator anim;
     private BoxCollider2D myFeet;
     private bool isGround;
+    private bool isMoving;
     private bool canDoubleJump;
 
     //private PlayerInputaction controls;
@@ -65,6 +66,7 @@ public class playercontroller : MonoBehaviour
         Flip();
         //Jump();
         CheckGrounded();
+        stepSound();
         // SwitchAnimation();
         //Attack();
 
@@ -131,6 +133,7 @@ public class playercontroller : MonoBehaviour
             Vector2 jumpVel = new Vector2(0.0f, jumpSpeed);
             rb2d.velocity = Vector2.up * jumpVel;
             canDoubleJump = true;
+            FindObjectOfType<AudioManager>().Play("Jump");
         }
         else
         {
@@ -142,6 +145,7 @@ public class playercontroller : MonoBehaviour
                     Vector2 doubleJumpVel = new Vector2(0.0f, doubleJumpSpeed);
                     rb2d.velocity = Vector2.up * doubleJumpVel;
                     canDoubleJump = false;
+                    FindObjectOfType<AudioManager>().Play("DoubleJump");
                 }
 
 
@@ -178,6 +182,7 @@ public class playercontroller : MonoBehaviour
             // change to angry mode and animation
             isNormal = false;
             anim.SetBool("Angry", true);
+            FindObjectOfType<AudioManager>().Play("AngryMode");
 
             // TODO: wait for several seconds
             clockAnim.SetBool("DisplayClock", true);
@@ -193,6 +198,25 @@ public class playercontroller : MonoBehaviour
             countdownClock.timeActive = false;
             isNormal = true;
             anim.SetBool("Angry", false);
+        }
+    }
+
+    public void stepSound()
+    {
+        if(Mathf.Abs(rb2d.velocity.x) > 0.1f && enableMoving)
+            isMoving = true;
+        else
+            isMoving = false;
+        
+        //Debug.Log(isMoving+"Moving! Playing sound.");
+        if(isMoving && isGround){
+            //Debug.Log("Moving! Playing sound.");
+            FindObjectOfType<AudioManager>().TurnOn("PlayerStep");
+        }
+        else{
+            //Debug.Log("NotMoving! Turning off the sound.");
+            FindObjectOfType<AudioManager>().TurnOff("PlayerStep");
+            //Debug.Log("The sound is playing:"+FindObjectOfType<AudioManager>().FindSound("PlayerStep").source.isPlaying);
         }
     }
 
