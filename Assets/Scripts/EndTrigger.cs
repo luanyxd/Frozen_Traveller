@@ -9,6 +9,7 @@ public class EndTrigger : MonoBehaviour
     public DialogueTrigger dialogueTrigger;
     public int winConditions;
     public string levelCompleteAchievementName;
+    private bool hasEnd;
 
     private bool isCommunicating;
 
@@ -16,6 +17,7 @@ public class EndTrigger : MonoBehaviour
     {
         hint.SetActive(true);
         isCommunicating = false;
+        hasEnd = false;
     }
     private void Update()
     {
@@ -27,14 +29,19 @@ public class EndTrigger : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D other)
     {
-        if (winConditions <= 0)
+        if (!hasEnd)
         {
-            gameManager.CompleteLevel(true);
-            FindObjectOfType<GlobalAchieve>().TriggerAchievementById(levelCompleteAchievementName);
-        } else if (!isCommunicating)
-        {
-            isCommunicating = true;
-            StartCoroutine(ShowHintCoroutine());
+            if (winConditions <= 0)
+            {
+                hasEnd = true;
+                gameManager.CompleteLevel(true);
+                FindObjectOfType<GlobalAchieve>().TriggerAchievementById(levelCompleteAchievementName);
+            }
+            else if (!isCommunicating)
+            {
+                isCommunicating = true;
+                StartCoroutine(ShowHintCoroutine());
+            }
         }
     }
 
