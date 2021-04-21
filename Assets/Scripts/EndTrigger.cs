@@ -31,6 +31,8 @@ public class EndTrigger : MonoBehaviour
     {
         if (!hasEnd)
         {
+            Debug.Log("touch endlevel!");
+            Debug.Log("isCommunicating: " + isCommunicating.ToString());
             if (winConditions <= 0)
             {
                 hasEnd = true;
