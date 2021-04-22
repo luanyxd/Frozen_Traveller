@@ -59,6 +59,11 @@ PrefabInstance:
       propertyPath: dialogueTrigger
       value: 
       objectReference: {fileID: 5922210256420946742}
+    - target: {fileID: 1489964071259394786, guid: bfb2b90ccb67b1348bb11ca3bcdd964d,
+        type: 3}
+      propertyPath: levelCompleteAchievementName
+      value: level1_complete
+      objectReference: {fileID: 0}
     - target: {fileID: 1489964071259394789, guid: bfb2b90ccb67b1348bb11ca3bcdd964d,
         type: 3}
       propertyPath: m_RootOrder

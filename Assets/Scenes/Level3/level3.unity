@@ -26922,43 +26922,113 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2537819859100008670, guid: 26579cbcc6700b849a31a3b5dc4fbf24,
         type: 3}
-      propertyPath: achievements.Array.data[0].id
-      value: level3_complete
+      propertyPath: achievements.Array.data[12].id
+      value: level2_time
       objectReference: {fileID: 0}
     - target: {fileID: 2537819859100008670, guid: 26579cbcc6700b849a31a3b5dc4fbf24,
         type: 3}
-      propertyPath: achievements.Array.data[1].id
-      value: level3_chest
+      propertyPath: achievements.Array.data[13].id
+      value: level2_time
       objectReference: {fileID: 0}
     - target: {fileID: 2537819859100008670, guid: 26579cbcc6700b849a31a3b5dc4fbf24,
         type: 3}
-      propertyPath: achievements.Array.data[2].id
-      value: level3_diamond
+      propertyPath: achievements.Array.data[14].id
+      value: level2_time
       objectReference: {fileID: 0}
     - target: {fileID: 2537819859100008670, guid: 26579cbcc6700b849a31a3b5dc4fbf24,
         type: 3}
-      propertyPath: achievements.Array.data[3].id
-      value: level3_time
+      propertyPath: achievements.Array.data[15].id
+      value: level2_time
       objectReference: {fileID: 0}
     - target: {fileID: 2537819859100008670, guid: 26579cbcc6700b849a31a3b5dc4fbf24,
         type: 3}
-      propertyPath: achievements.Array.data[0].title
-      value: LEVEL3 Completed!
+      propertyPath: achievements.Array.data[12].title
+      value: Speed on the beach
       objectReference: {fileID: 0}
     - target: {fileID: 2537819859100008670, guid: 26579cbcc6700b849a31a3b5dc4fbf24,
         type: 3}
-      propertyPath: achievements.Array.data[3].title
-      value: Speed and falling
+      propertyPath: achievements.Array.data[13].title
+      value: Speed on the beach
       objectReference: {fileID: 0}
     - target: {fileID: 2537819859100008670, guid: 26579cbcc6700b849a31a3b5dc4fbf24,
         type: 3}
-      propertyPath: achievements.Array.data[3].description
+      propertyPath: achievements.Array.data[14].title
+      value: Speed on the beach
+      objectReference: {fileID: 0}
+    - target: {fileID: 2537819859100008670, guid: 26579cbcc6700b849a31a3b5dc4fbf24,
+        type: 3}
+      propertyPath: achievements.Array.data[15].title
+      value: Speed on the beach
+      objectReference: {fileID: 0}
+    - target: {fileID: 2537819859100008670, guid: 26579cbcc6700b849a31a3b5dc4fbf24,
+        type: 3}
+      propertyPath: achievements.Array.data[12].achImage
+      value: 
+      objectReference: {fileID: 21300000, guid: 8f14a3da963c27b4f955bb3a3e6d7f69,
+        type: 3}
+    - target: {fileID: 2537819859100008670, guid: 26579cbcc6700b849a31a3b5dc4fbf24,
+        type: 3}
+      propertyPath: achievements.Array.data[13].achImage
+      value: 
+      objectReference: {fileID: 21300000, guid: 8f14a3da963c27b4f955bb3a3e6d7f69,
+        type: 3}
+    - target: {fileID: 2537819859100008670, guid: 26579cbcc6700b849a31a3b5dc4fbf24,
+        type: 3}
+      propertyPath: achievements.Array.data[14].achImage
+      value: 
+      objectReference: {fileID: 21300000, guid: 8f14a3da963c27b4f955bb3a3e6d7f69,
+        type: 3}
+    - target: {fileID: 2537819859100008670, guid: 26579cbcc6700b849a31a3b5dc4fbf24,
+        type: 3}
+      propertyPath: achievements.Array.data[15].achImage
+      value: 
+      objectReference: {fileID: 21300000, guid: 8f14a3da963c27b4f955bb3a3e6d7f69,
+        type: 3}
+    - target: {fileID: 2537819859100008670, guid: 26579cbcc6700b849a31a3b5dc4fbf24,
+        type: 3}
+      propertyPath: achievements.Array.data[12].description
       value: You arrived here within 30 seconds from begin of the game.
       objectReference: {fileID: 0}
     - target: {fileID: 2537819859100008670, guid: 26579cbcc6700b849a31a3b5dc4fbf24,
         type: 3}
-      propertyPath: collectionAchievements.Array.data[0].id
-      value: level3_coin
+      propertyPath: achievements.Array.data[13].description
+      value: You arrived here within 30 seconds from begin of the game.
+      objectReference: {fileID: 0}
+    - target: {fileID: 2537819859100008670, guid: 26579cbcc6700b849a31a3b5dc4fbf24,
+        type: 3}
+      propertyPath: achievements.Array.data[14].description
+      value: You arrived here within 30 seconds from begin of the game.
+      objectReference: {fileID: 0}
+    - target: {fileID: 2537819859100008670, guid: 26579cbcc6700b849a31a3b5dc4fbf24,
+        type: 3}
+      propertyPath: achievements.Array.data[15].description
+      value: You arrived here within 30 seconds from begin of the game.
+      objectReference: {fileID: 0}
+    - target: {fileID: 2537819859100008670, guid: 26579cbcc6700b849a31a3b5dc4fbf24,
+        type: 3}
+      propertyPath: collectionAchievements.Array.data[3].id
+      value: level2_trash
+      objectReference: {fileID: 0}
+    - target: {fileID: 2537819859100008670, guid: 26579cbcc6700b849a31a3b5dc4fbf24,
+        type: 3}
+      propertyPath: collectionAchievements.Array.data[3].goal
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2537819859100008670, guid: 26579cbcc6700b849a31a3b5dc4fbf24,
+        type: 3}
+      propertyPath: collectionAchievements.Array.data[3].title
+      value: environmentalist
+      objectReference: {fileID: 0}
+    - target: {fileID: 2537819859100008670, guid: 26579cbcc6700b849a31a3b5dc4fbf24,
+        type: 3}
+      propertyPath: collectionAchievements.Array.data[3].achImage
+      value: 
+      objectReference: {fileID: 21300000, guid: 0c583946f206bd8438b5c57738c13006,
+        type: 3}
+    - target: {fileID: 2537819859100008670, guid: 26579cbcc6700b849a31a3b5dc4fbf24,
+        type: 3}
+      propertyPath: collectionAchievements.Array.data[3].description
+      value: You make the environment better.
       objectReference: {fileID: 0}
     - target: {fileID: 2537819859100008671, guid: 26579cbcc6700b849a31a3b5dc4fbf24,
         type: 3}
@@ -29566,7 +29636,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 861881032}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.13857865, y: -0.7993272, z: -10}
+  m_LocalPosition: {x: -1.126363, y: -0.79962, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -42121,6 +42191,11 @@ PrefabInstance:
       propertyPath: gameManager
       value: 
       objectReference: {fileID: 1815709143}
+    - target: {fileID: 2298507771507233429, guid: ec5a284f34a06e84190e921820efedbd,
+        type: 3}
+      propertyPath: levelCompleteAchievementName
+      value: level3_complete
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ec5a284f34a06e84190e921820efedbd, type: 3}
 --- !u!1001 &1319209371

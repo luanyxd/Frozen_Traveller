@@ -340,6 +340,7 @@ MonoBehaviour:
   questionImage: {fileID: 7204299379726681901}
   awardName: {fileID: 7204299380514762669}
   questionMarkList: {fileID: 7204299379724443528}
+  achievementLog: {fileID: 0}
 --- !u!1 &7204299380371123237
 GameObject:
   m_ObjectHideFlags: 0

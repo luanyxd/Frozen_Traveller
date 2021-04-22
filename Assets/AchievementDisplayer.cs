@@ -1,7 +1,8 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using UnityEngine.UI;
+using TMPro;
 public class AchievementDisplayer : MonoBehaviour
 {
     public string awardTag;
@@ -16,6 +17,13 @@ public class AchievementDisplayer : MonoBehaviour
         if (PlayerPrefs.GetInt(awardTag) == 1)
         {
             awardImage.SetActive(true);
+            Achievement ach = FindObjectOfType<GlobalAchieve>().findAllAchievementById(awardTag);
+            if(ach == null)
+            {
+                Debug.Log("AwardTag "+awardTag+" not found!");
+            }
+            awardImage.GetComponent<Image>().sprite = ach.achImage;
+            awardName.GetComponent<TextMeshProUGUI>().text = ach.description;
             awardName.SetActive(true);
             questionImage.SetActive(false);
             questionMarkList.SetActive(false);

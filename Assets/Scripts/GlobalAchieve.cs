@@ -113,6 +113,18 @@ public class GlobalAchieve : MonoBehaviour
         return achi;
     }
 
+    public Achievement findAllAchievementById(string id)
+    {
+        Achievement achi = Array.Find(achievements, a => a.id == id);
+        if(achi == null){
+            achi = Array.Find(collectionAchievements, a => a.id == id);
+            if(achi == null){
+                Debug.Log("NO Achievement "+id+" not found!");
+            }
+        }
+        return achi;
+    }
+
     public void increaseCollectionAchievementById(string id)
     {
         CollectionAchievement a = findCollectionAchievementById(id);

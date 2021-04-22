@@ -56,14 +56,8 @@ MonoBehaviour:
   achievements:
   - id: level1_complete
     title: LEVEL1 Completed!
-    description: You finished the first level.
-    achImage: {fileID: 21300000, guid: c3878b09680bca74686a39d986b6bfd9, type: 3}
-    active: 0
-    code: 0
-  - id: level1_chest
-    title: A chest in the woods
-    description: Here is a chest. Why there is always a chest?
-    achImage: {fileID: 21300000, guid: 871c68e03f708a149a41d28b6d79bd04, type: 3}
+    description: You finished the first  level.
+    achImage: {fileID: 21300000, guid: f4fae708b29310a4eaad32ac029f9cf8, type: 3}
     active: 0
     code: 0
   - id: level1_diamond
@@ -72,9 +66,63 @@ MonoBehaviour:
     achImage: {fileID: 21300000, guid: 6d22f6eea12364a4ba3b58ea2ddde8c9, type: 3}
     active: 0
     code: 0
+  - id: level1_chest
+    title: Chest in the woods
+    description: Here is a chest. Why there is always a chest?
+    achImage: {fileID: 21300000, guid: 871c68e03f708a149a41d28b6d79bd04, type: 3}
+    active: 0
+    code: 0
   - id: level1_time
     title: Speed and woods
     description: You arrived the tree within 30 seconds from begin of the game.
+    achImage: {fileID: 21300000, guid: 8f14a3da963c27b4f955bb3a3e6d7f69, type: 3}
+    active: 0
+    code: 0
+  - id: level2_complete
+    title: level2_complete
+    description: You finished the second  level.
+    achImage: {fileID: 21300000, guid: 1f41ae9addd9aea45ab7a7630b967b61, type: 3}
+    active: 0
+    code: 0
+  - id: level2_diamond
+    title: Diamond on the beach
+    description: You got the diamond on the beach. That's something.
+    achImage: {fileID: 21300000, guid: 6d22f6eea12364a4ba3b58ea2ddde8c9, type: 3}
+    active: 0
+    code: 0
+  - id: level2_chest
+    title: A chest on the beach
+    description: Here is a chest on the beach.
+    achImage: {fileID: 21300000, guid: 871c68e03f708a149a41d28b6d79bd04, type: 3}
+    active: 0
+    code: 0
+  - id: level2_time
+    title: Speed on the beach
+    description: You arrived here within 30 seconds from begin of the game.
+    achImage: {fileID: 21300000, guid: 8f14a3da963c27b4f955bb3a3e6d7f69, type: 3}
+    active: 0
+    code: 0
+  - id: level3_complete
+    title: LEVEL3 Completed!
+    description: You completed the final level.
+    achImage: {fileID: 21300000, guid: 253a4c4a7c6493248bada3f438226f70, type: 3}
+    active: 0
+    code: 0
+  - id: level3_chest
+    title: Chest in the snow
+    description: You find a chest even when falling.
+    achImage: {fileID: 21300000, guid: 871c68e03f708a149a41d28b6d79bd04, type: 3}
+    active: 0
+    code: 0
+  - id: level3_diamond
+    title: Diamond in the snow
+    description: You got the diamond even when falling in the snow.
+    achImage: {fileID: 21300000, guid: 6d22f6eea12364a4ba3b58ea2ddde8c9, type: 3}
+    active: 0
+    code: 0
+  - id: level3_time
+    title: Speed and falling
+    description: You falled here within 30 seconds from begin of the game.
     achImage: {fileID: 21300000, guid: 8f14a3da963c27b4f955bb3a3e6d7f69, type: 3}
     active: 0
     code: 0
@@ -82,6 +130,22 @@ MonoBehaviour:
   - id: level1_coin
     title: Coin Collector
     description: Apparently, you know how to collect coins.
+    achImage: {fileID: 21300000, guid: eb907673e1336ea4b8db83de17c3442a, type: 3}
+    active: 0
+    code: 0
+    counter: 0
+    goal: 3
+  - id: level2_trash
+    title: environmentalist
+    description: You make the environment better.
+    achImage: {fileID: 21300000, guid: 0c583946f206bd8438b5c57738c13006, type: 3}
+    active: 0
+    code: 0
+    counter: 0
+    goal: 2
+  - id: level3_coin
+    title: Snow Coin Collector
+    description: You collect coins even in snow.
     achImage: {fileID: 21300000, guid: eb907673e1336ea4b8db83de17c3442a, type: 3}
     active: 0
     code: 0
