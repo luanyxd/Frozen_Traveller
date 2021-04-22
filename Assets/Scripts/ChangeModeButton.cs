@@ -7,12 +7,14 @@ using UnityEngine.SceneManagement;
 public class ChangeModeButton : MonoBehaviour
 {
     private playercontroller player;
+    private playercontroller_2 player2;
     public TMP_Text amountText;
     private int bottleAmount;
 
     void Start()
     {
         player = FindObjectOfType<playercontroller>();
+        player2 = FindObjectOfType<playercontroller_2>();
         if (SceneManager.GetActiveScene().buildIndex < 3)
             bottleAmount = 0;
         else
@@ -40,6 +42,14 @@ public class ChangeModeButton : MonoBehaviour
         {
             bottleAmount -= 1;
             StartCoroutine(player.BecomeAngryCoroutine());
+        }
+    }
+    public void ChangeMode2()
+    {
+        if (bottleAmount > 0)
+        {
+            bottleAmount -= 1;
+            StartCoroutine(player2.BecomeAngryCoroutine());
         }
     }
 

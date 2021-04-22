@@ -70,7 +70,8 @@ public class playercontroller_2 : MonoBehaviour
         // SwitchAnimation();
         Attack();
         stepSound();
-        StartCoroutine(BecomeAngryCoroutine());
+        becomeangry();
+       // StartCoroutine(BecomeAngryCoroutine());
 
         //Debug.Log(rb2d.velocity.x);
     }
@@ -168,8 +169,8 @@ public class playercontroller_2 : MonoBehaviour
 
     public IEnumerator BecomeAngryCoroutine()
     {
-        if (Input.GetButtonDown("ChangeMode"))
-        {
+        //if (Input.GetButtonDown("ChangeMode"))
+       // {
             if (isNormal)
             {
                 // change to angry mode and animation
@@ -193,6 +194,13 @@ public class playercontroller_2 : MonoBehaviour
                 isNormal = true;
                 anim.SetBool("Angry", false);
             }
+        //}
+    }
+    public void becomeangry()
+    {
+        if (Input.GetButtonDown("ChangeMode"))
+        {
+            FindObjectOfType<ChangeModeButton>().ChangeMode2();
         }
     }
 
