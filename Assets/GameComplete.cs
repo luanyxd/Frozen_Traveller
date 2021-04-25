@@ -30,16 +30,19 @@ public class GameComplete : MonoBehaviour
             student.SetActive(true);
             scholar.SetActive(false);
             environmentalist.SetActive(false);
+            FindObjectOfType<GlobalAchieve>().TriggerAchievementById("finaleval_student");
         } else if (PlayerPrefs.GetInt("final_score") < 200)
         {
             student.SetActive(false);
             scholar.SetActive(true);
             environmentalist.SetActive(false);
+            FindObjectOfType<GlobalAchieve>().TriggerAchievementById("finaleval_scholar");
         } else
         {
             student.SetActive(false);
             scholar.SetActive(false);
             environmentalist.SetActive(true);
+            FindObjectOfType<GlobalAchieve>().TriggerAchievementById("finaleval_environmentalist");
         }
 
         if (PlayerPrefs.GetFloat("shortest_time", -1f) == -1f)

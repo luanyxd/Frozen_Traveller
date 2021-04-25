@@ -65,7 +65,8 @@ public class GlobalAchieve : MonoBehaviour
 
     void Start()
     {
-        //PlayerPrefs.DeleteAll();
+        //PlayerPrefs.DeleteKey("finaleval_student");
+        //PlayerPrefs.DeleteKey("level3_complete");
     }
 
     void Awake()

@@ -126,6 +126,24 @@ MonoBehaviour:
     achImage: {fileID: 21300000, guid: 8f14a3da963c27b4f955bb3a3e6d7f69, type: 3}
     active: 0
     code: 0
+  - id: finaleval_student
+    title: Environment Student
+    description: You are an Environment Student.
+    achImage: {fileID: 21300000, guid: 96d5f7dc591d58845b76d371d0bb62b2, type: 3}
+    active: 0
+    code: 0
+  - id: finaleval_scholar
+    title: Environment Scholar
+    description: You are an Environment Scholar.
+    achImage: {fileID: 21300000, guid: e9ff0ac98790b774ca41c5f6d4097f8a, type: 3}
+    active: 0
+    code: 0
+  - id: finaleval_environmentalist
+    title: Environmentalist
+    description: You are an Environmentalist.
+    achImage: {fileID: 21300000, guid: 46e8ae698ae79824bace97c180a61855, type: 3}
+    active: 0
+    code: 0
   collectionAchievements:
   - id: level1_coin
     title: Coin Collector
