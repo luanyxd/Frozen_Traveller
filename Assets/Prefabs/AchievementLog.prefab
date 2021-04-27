@@ -152,7 +152,7 @@ MonoBehaviour:
     active: 0
     code: 0
     counter: 0
-    goal: 3
+    goal: 2
   - id: level2_trash
     title: environmentalist
     description: You make the environment better.
