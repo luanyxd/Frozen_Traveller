@@ -59,6 +59,7 @@ public class Wraith : MonoBehaviour
                 transform.localScale = new Vector3(0.75f, 0.75f, 1);
             }
             Destroy(other.gameObject);
+            FindObjectOfType<AudioManager>().Play("EnemyHit");
             health -= 1;
             if (health == 0)
             {
