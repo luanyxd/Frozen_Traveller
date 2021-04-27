@@ -597,6 +597,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1081604267, guid: e3d01897dca8c764db2f83a2fd40a46f, type: 3}
+      propertyPath: health
+      value: 20
+      objectReference: {fileID: 0}
     - target: {fileID: 166396653608544898, guid: e3d01897dca8c764db2f83a2fd40a46f,
         type: 3}
       propertyPath: m_SortingLayer
@@ -686,7 +690,7 @@ PrefabInstance:
         type: 3}
       propertyPath: healthBar
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 3972098766861238117}
     - target: {fileID: 166396653608544908, guid: e3d01897dca8c764db2f83a2fd40a46f,
         type: 3}
       propertyPath: m_Enabled
@@ -702,6 +706,11 @@ PrefabInstance:
       propertyPath: countdownClock
       value: 
       objectReference: {fileID: 304275898}
+    - target: {fileID: 166396653608544908, guid: e3d01897dca8c764db2f83a2fd40a46f,
+        type: 3}
+      propertyPath: coinCollectedDisplayer
+      value: 
+      objectReference: {fileID: 3972098766861238116}
     - target: {fileID: 460481037486338064, guid: e3d01897dca8c764db2f83a2fd40a46f,
         type: 3}
       propertyPath: snowball
@@ -709,15 +718,40 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1169296289641645607, guid: e3d01897dca8c764db2f83a2fd40a46f,
         type: 3}
+      propertyPath: clockAnim
+      value: 
+      objectReference: {fileID: 304275900}
+    - target: {fileID: 1169296289641645607, guid: e3d01897dca8c764db2f83a2fd40a46f,
+        type: 3}
+      propertyPath: healthBar
+      value: 
+      objectReference: {fileID: 3972098766861238117}
+    - target: {fileID: 1169296289641645607, guid: e3d01897dca8c764db2f83a2fd40a46f,
+        type: 3}
       propertyPath: m_Enabled
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 1169296289641645607, guid: e3d01897dca8c764db2f83a2fd40a46f,
+        type: 3}
+      propertyPath: timeDisplayer
+      value: 
+      objectReference: {fileID: 304275895}
+    - target: {fileID: 1169296289641645607, guid: e3d01897dca8c764db2f83a2fd40a46f,
+        type: 3}
+      propertyPath: countdownClock
+      value: 
+      objectReference: {fileID: 304275898}
     - target: {fileID: 1169296289641645607, guid: e3d01897dca8c764db2f83a2fd40a46f,
         type: 3}
       propertyPath: movingAudioSrc
       value: 
       objectReference: {fileID: 5899765109569611915, guid: fbe77931a1fd1934d88aac97bf5edf11,
         type: 3}
+    - target: {fileID: 1169296289641645607, guid: e3d01897dca8c764db2f83a2fd40a46f,
+        type: 3}
+      propertyPath: coinCollectedDisplayer
+      value: 
+      objectReference: {fileID: 3972098766861238116}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e3d01897dca8c764db2f83a2fd40a46f, type: 3}
 --- !u!1 &1674709108
@@ -1560,6 +1594,30 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0aa6769bd22383a4796ca851cdfaf846, type: 3}
+--- !u!114 &3972098766861238116 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3293634914850570533, guid: 0aa6769bd22383a4796ca851cdfaf846,
+    type: 3}
+  m_PrefabInstance: {fileID: 3972098766861238115}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ca6afb6d5de24d947a258eaeb24588e6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &3972098766861238117 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2512653435908237286, guid: 0aa6769bd22383a4796ca851cdfaf846,
+    type: 3}
+  m_PrefabInstance: {fileID: 3972098766861238115}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 820e2f1c9f211454daeb11896d6b6a89, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &6035391720553051107
 PrefabInstance:
   m_ObjectHideFlags: 0
