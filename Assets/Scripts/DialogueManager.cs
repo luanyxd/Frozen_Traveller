@@ -47,6 +47,7 @@ public class DialogueManager : MonoBehaviour
             EndDialogue();
             if (SceneManager.GetActiveScene().buildIndex == 7)
             {
+                Debug.Log("DISPLAY GAMECOMPLETE");
                 gameComplete.SetActive(true);
             }
             return;
