@@ -24,7 +24,10 @@ public class Door_out : MonoBehaviour
         // wait animation complete
         yield return new WaitForSeconds(FindObjectOfType<LevelChanger>().transitionTime);
 
-        FindObjectOfType<playercontroller_2>().setPosition(inPosition);
+        if (GameObject.Find("player").GetComponent<playercontroller>().isActiveAndEnabled)
+            FindObjectOfType<playercontroller>().setPosition(inPosition);
+        else
+            FindObjectOfType<playercontroller_2>().setPosition(inPosition);
 
         FindObjectOfType<LevelChanger>().transition.SetBool("Close", false);
     }

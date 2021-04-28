@@ -18,7 +18,10 @@ public class Door_in : MonoBehaviour
         if (!hasEntered && other.gameObject.CompareTag("Player") && other.GetType().ToString() == "UnityEngine.CapsuleCollider2D")
         {
             hasEntered = true;
-            FindObjectOfType<Door_out>().inPosition = FindObjectOfType<playercontroller_2>().getPosition();
+            if (GameObject.Find("player").GetComponent<playercontroller>().isActiveAndEnabled)
+                FindObjectOfType<Door_out>().inPosition = FindObjectOfType<playercontroller>().getPosition();
+            else
+                FindObjectOfType<Door_out>().inPosition = FindObjectOfType<playercontroller_2>().getPosition();
             StartCoroutine(JumpToBonusLevel());
         }
     }
@@ -31,7 +34,10 @@ public class Door_in : MonoBehaviour
         // wait animation complete
         yield return new WaitForSeconds(FindObjectOfType<LevelChanger>().transitionTime);
 
-        FindObjectOfType<playercontroller_2>().setPosition(outPosition);
+        if (GameObject.Find("player").GetComponent<playercontroller>().isActiveAndEnabled)
+            FindObjectOfType<playercontroller>().setPosition(outPosition);
+        else
+            FindObjectOfType<playercontroller_2>().setPosition(outPosition);
 
         FindObjectOfType<LevelChanger>().transition.SetBool("Close", false);
     }

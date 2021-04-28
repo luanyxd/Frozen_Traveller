@@ -78,10 +78,12 @@ public class DialogueManager : MonoBehaviour
     void EndDialogue()
     {
         animator.SetBool("IsOpen", false);
-        //playercontroller.enableMoving = true;
-        playercontroller_2.enableMoving = true;
-        FindObjectOfType<playercontroller_2>().enabled = true;
-        //Time.timeScale = 1f;
+        if (GameObject.Find("player").GetComponent<playercontroller>().isActiveAndEnabled)
+            playercontroller.enableMoving = true;
+        else
+            playercontroller_2.enableMoving = true;
+        
+        Time.timeScale = 1f;
 
         // TODO: display joystick
 

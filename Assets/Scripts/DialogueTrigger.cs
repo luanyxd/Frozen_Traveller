@@ -8,7 +8,16 @@ public class DialogueTrigger : MonoBehaviour
 
     public void TriggerDialogue ()
     {
-        FindObjectOfType<playercontroller_2>().setIdle();
+        if (GameObject.Find("player").GetComponent<playercontroller>().isActiveAndEnabled)
+        {
+            FindObjectOfType<playercontroller>().setIdle();
+        }
+            
+        else
+        {
+            FindObjectOfType<playercontroller_2>().setIdle();
+        }
+            
         FindObjectOfType<DialogueManager>().StartDialogue(dialogue);
     }
 }

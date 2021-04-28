@@ -32,7 +32,10 @@ public class PlayerHealth : MonoBehaviour
         HealthBar.HealthCurrent = health;
         if (health <= 0)
         {
-            FindObjectOfType<playercontroller_2>().setDie();
+            if (GameObject.Find("player").GetComponent<playercontroller>().isActiveAndEnabled)
+                FindObjectOfType<playercontroller>().setDie();
+            else
+                FindObjectOfType<playercontroller_2>().setDie();
             StartCoroutine(WaitToDie());
         }
         polygonCollider2D.enabled = false;

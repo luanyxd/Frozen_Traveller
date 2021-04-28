@@ -79,8 +79,8 @@ public class playercontroller : MonoBehaviour
     void Run()
     {
 
-        if (enableMoving)
-        {
+        //if (enableMoving)
+        //{
 
             float moveDir;
 
@@ -106,7 +106,7 @@ public class playercontroller : MonoBehaviour
             bool playerHasXSpeed = Mathf.Abs(rb2d.velocity.x) > Mathf.Epsilon;
             anim.SetBool("Run", playerHasXSpeed);
 
-        }
+        //}
 
     }
     void Flip()
